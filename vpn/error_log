@@ -1,0 +1,10 @@
+[09-Jan-2013 13:09:04 UTC] PHP Warning:  include(../details.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/index.php on line 5
+[09-Jan-2013 13:09:04 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../details.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/index.php on line 5
+[09-Jan-2013 13:09:04 UTC] PHP Notice:  Undefined variable: host in /home/wattspor/public_html/vpn/index.php on line 7
+[09-Jan-2013 13:09:04 UTC] PHP Notice:  Undefined variable: username in /home/wattspor/public_html/vpn/index.php on line 7
+[09-Jan-2013 13:09:04 UTC] PHP Notice:  Undefined variable: password in /home/wattspor/public_html/vpn/index.php on line 7
+[09-Jan-2013 13:09:04 UTC] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'wattspor'@'localhost' (using password: NO) in /home/wattspor/public_html/vpn/index.php on line 7
+[09-Jan-2013 13:09:04 UTC] PHP Notice:  Undefined variable: database in /home/wattspor/public_html/vpn/index.php on line 8
+[09-Jan-2013 13:09:04 UTC] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: Access denied for user 'wattspor'@'localhost' (using password: NO) in /home/wattspor/public_html/vpn/index.php on line 8
+[09-Jan-2013 13:09:04 UTC] PHP Warning:  mysql_select_db() [<a href='function.mysql-select-db'>function.mysql-select-db</a>]: A link to the server could not be established in /home/wattspor/public_html/vpn/index.php on line 8
+[09-Jan-2013 13:09:04 UTC] PHP Notice:  Undefined variable: username in /home/wattspor/public_html/vpn/index.php on line 10

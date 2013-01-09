@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Create Event</title>
+</head>
+
+<body>
+	<script>
+	function validateDates( start, end )
+	{
+		var bits = start.split( '-' );
+		var startdate_php = new Date( bits[2], --bits[1], bits[0] );
+		if( startdate_php.getFullYear( ) != bits[2] || startdate_php.getMonth( ) != bits[1] )
+		{
+			alert( "Invalid start date.\nFormat: DD-MM-YYYY" );
+			return false;
+		}
+
+		var bits = end.split( '-' );
+		var enddate_php = new Date( bits[2], --bits[1], bits[0] );
+		if( enddate_php.getFullYear( ) != bits[2] || enddate_php.getMonth( ) != bits[1] )
+		{
+			alert( "Invalid end date.\nFormat: DD-MM-YYYY" );
+			return false;
+		}
+
+		var now = new Date( );
+		var today_php = new Date(now.getFullYear(),now.getMonth(),now.getDate());
+		if( startdate_php < today_php )
+		{
+			alert( "Events cannot be scheduled in the past!" );
+			return false;
+		}
+
+		if( enddate_php <= startdate_php )
+		{
+			alert( "Event cannot finish on or before the day it starts!" );
+			return false;
+		}
+
+		return true;
+	}
+
+	function validateForm( form )
+	{
+		if( form.event_name.value == "" )
+		{
+			alert( "Event must have a name!" );
+			return false;
+		}
+		
+		// Date validation goes here
+		if( !validateDates( form.date_start.value, form.date_end.value ) )
+			return false;
+		
+		return true;
+	}
+	</script>
+
+	<h1>Create an event</h1>
+        <form  method="POST" onsubmit="return validateForm( this )" action="./create_event.php">
+	 	<p> Event Name <input name="event_name" type="text" /></p>
+	 	<p> Event Type  <select name="event_type">
+	 			 <option value="wattball" selected>Wattball</option>
+				 <option value="hurdles400">Hurdles (400m)</option>
+	 			</select>
+	 	<p> Start Date <input name="date_start" type="text" /></p>
+	 	<p> End Date <input name="date_end" type="text" /></p>
+	 	<input type="submit" title="submit" />
+  	</form>
+</body>
+</html>
