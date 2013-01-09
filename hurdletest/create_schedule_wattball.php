@@ -28,6 +28,7 @@ if (($num_teams % 2)==0) //for an even number of teams
 	//$games = 2d array ---skipping for now as php flexible enough to add to array without defining length
 	$x = 1;	
 	$slots = (($num_teams-1)/2)*$rounds;
+	$p = 0; //variable for looping when pairing in round robin
 }
 else //for an odd number of teams
 {
@@ -35,6 +36,7 @@ else //for an odd number of teams
 	$rounds = $num_teams;
 	$x = 0; //0 becomes a dummy value and we will not count any games it is paired in
 	$slots = ($num_teams/2)*$rounds;
+	$p = 1; //justification -- we want to ignore the first pairing if we have dummy team 0
 }
 $y=0;
 for($x; $x<=$num_teams; $x++)
@@ -51,12 +53,42 @@ for($i=0; $i < $m/2; $i++)
 	$part1[$i]=$players[$x];
 	$x++;
 }
+$x=0;
 for($i=0; $i < $m/2; $i++)
 {
-	$part1[$i]=$players[$x];
+	$part2[$i]=$players[$x];
 	$x++;
 }
 $x=($round-1)*($m/2)
+
+for($p; $p < ($m/2)
+{
+	games[$x][0]=part1[$i];
+	games[$x][1]=part2[$i];
+	$x++;
+{
+$round++
+//loop round 2 to number of rounds
+for($round; $round <= $rounds; $round++)
+{
+	//round robin algorithm
+	$temp1 = $part1[1];
+	for($j = 2; $j < (m/2); $j++)
+	{
+		$temp2 = $part1[$j];
+		$part1[$j] = $temp1;
+		$temp1 = $temp2;
+	}
+	for($j; $j>=0; $j--)
+	{
+		$temp2 = $part2[$j];
+		$part2[$j] = $temp1;
+		$temp1 = $temp2;
+	}
+	$part1[1]=$temp1;
+	$x = ($round-1)*($m/2)
+	
+}
 
 
 ?>
