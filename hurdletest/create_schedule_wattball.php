@@ -16,4 +16,6 @@ $date_start_mysql = date( 'Y-m-d H:i:s', $date_start_php );
 $date_end_php = strtotime( $result_array['end_date'] );
 $date_end_mysql = date( 'Y-m-d H:i:s', $date_end_php );
 
+
+
 ?>
