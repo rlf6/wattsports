@@ -66,7 +66,7 @@ for($p; $p < ($m/2)
 	games[$x][0]=part1[$i];
 	games[$x][1]=part2[$i];
 	$x++;
-{
+}
 $round++
 //loop round 2 to number of rounds
 for($round; $round <= $rounds; $round++)
@@ -88,7 +88,27 @@ for($round; $round <= $rounds; $round++)
 	$part1[1]=$temp1;
 	$x = ($round-1)*($m/2)
 	
+	//for an even number of teams, start at the first pair
+	if (($num_teams % 2) == 0)
+	{
+		$p = 0;
+	}
+	else
+	//for an odd number of teams, ignore the first pair
+	{
+		$p = 1;
+	}
+	for($p; $p < ($m/2)
+	{
+		games[$x][0]=part1[$i];
+		games[$x][1]=part2[$i];
+		$x++;
+	}
+	$round++
+	
 }
+//===========calculate available slots============
+//calculate days
 
 
 
