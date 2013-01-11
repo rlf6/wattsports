@@ -9,3 +9,14 @@ of style.css so it is easier to update the theme.
 Simply copy an existing style from style.css to this file, 
 and modify it to your liking.
 */
+
+div.scroll
+{
+
+height:550px;
+overflow:scroll;
+}
+td.padding
+{
+padding:45px;
+}
