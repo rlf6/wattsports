@@ -2,7 +2,6 @@
 // ============================= FIRST DAY ================================
 function schedule_first_day( )
 {
-	// Work out if the initial day is required
 	$query = "SELECT * FROM hurdler WHERE previous_best IS NULL";
 	$result = mysql_query( $query );
 	$num_rows = mysql_num_rows( $result );
