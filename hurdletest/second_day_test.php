@@ -2,32 +2,25 @@
 error_reporting(E_ALL); 
 ini_set('display_errors', 1); 
 	
-//include("../database.php");
-
-$host = 'localhost'; // Host name (normally 'localhost')
-$username = 'wattspor'; // MySQL login username
-$password = 'wattball10'; // MySQL login password
-$database = 'wattspor_database'; // Database name#
-
-mysql_connect($host, $username, $password);
-mysql_select_db($database);
+include("../database.php");
 
 $num_lanes = 8;
 
-// ============================= FIRST DAY ================================
+// ============================= SECOND DAY ================================
 
-	$query = "SELECT * FROM hurdler WHERE previous_best IS NULL";
+	// order by ascending previous_best
+	// so that the hurdlers are added in that order
+	$query = "SELECT * FROM hurdler ORDER BY previous_best ASC";
 	$result = mysql_query( $query );
 	$num_rows = mysql_num_rows( $result );
 	if( mysql_num_rows( $result ) < 1 )
 	{
-		echo "Error: Tried to schedule first day, but all runners have a previous best.";
+		echo "Error: No hurdlers to schedule";
 		exit;
 	}
 	
 	// work out how many races need to be run
-	// lane distribution not specified
-	// so do it the same way as following days
+	// lane distribution: random
 	$num_races_today = $num_rows / $num_lanes
 	
 	if( ( $num_races_today % $num_lanes ) > 0 )
@@ -41,9 +34,28 @@ $num_lanes = 8;
 		// GET RACE $race
 		$race = $race_array['$i'];
 		
-		// ADD THIS RUNNER TO FIRST AVAILABLE LANE
-		$j = 1;
-		while( $j <= $num_lanes )
+		// Count the number of free lanes
+		$j = 0;
+		$free = 0;
+		while( $j < $num_lanes )
+		{
+			if( $race['$j'] == NULL )
+				$free++;
+				
+			$j++;
+		}
+		
+		// Check there are free lanes in this race
+		if( $free < 1 )
+		{
+			echo "Error: No free lanes in race " . $i . ".";
+			return;
+		}
+				
+		// ADD THIS RUNNER TO RANDOM LANE (unless it's full)
+		$j = rand(1, $num_lanes);
+		$tried = 0;
+		while( $tried <= 100 ) // don't try forever
 		{
 			if( $race['$j'] == NULL ) // is this lane available?
 			{
@@ -51,14 +63,15 @@ $num_lanes = 8;
 				break;
 			}
 			
-			$j++; // try the next lane
+			$j = rand(1, $num_lanes); // try the next lane
+			$tried++;
 		}
 		
 		// Error handling
-		if( $j > $num_lanes )
+		if( $tried = 100 )
 		{
-			echo "Error: Out of lanes to put hurdlers in; Not yet out of hurdlers to put in lanes.";
-			exit;
+			echo "Error: Tried one hundred times to find the free lane in race " . $i . ".";
+			return;
 		}
 		
 		// CHOOSE NEXT RACE
