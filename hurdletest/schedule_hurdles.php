@@ -40,7 +40,40 @@
 	 		echo '<option value="'.$event_id.'">'.$event_name.'</option>';
 	 	}
 	 	?>
-	 	</select>
+	 	</select><br><br>
+		<h3> Options </h3>
+		Tournament day begins (24h): 
+			<select name="begin_h">
+				<option>9</option> <option>10</option> <option>11</option> <option>12</option> <option>13</option> <option>14</option>
+				<option>15</option> <option>16</option> <option>17</option> <option>18</option> <option>19</option> 
+			</select>h  
+			<select name="begin_m">
+				<option> 00 </option> <option> 15 </option> <option> 30 </option> <option> 45 </option>
+			</select>
+			<br>
+		Tournament day ends:
+			<select name="end_h">
+				<option>9</option> <option>10</option> <option>11</option> <option>12</option> <option>13</option> <option>14</option>
+				<option>15</option> <option>16</option> <option>17</option> <option>18</option> <option>19</option> 
+			</select>h 
+			<select name="end_m">
+				<option> 00 </option> <option> 15 </option> <option> 30 </option> <option> 45 </option>
+			</select>
+		<br>
+		Match duration:
+			<select name="duration">
+				<option> 15 </option> <option> 30 </option> <option> 45 </option> 
+				<option> 60 </option> <option> 75 </option> <option> 90 </option>
+			</select>minutes
+		<br>
+		Min gap between matches:
+		<select name="gap">
+			<option> 10 </option> <option> 20 </option> <option> 30 </option> <option> 40 </option>
+		</select>
+		<br>
+		Include weekends?:
+		<input type="radio" name="weekends" value="Y">Yes</input>  
+		<input type="radio" name="weekends" value="N">No</input>
 		<input type="submit" title="submit" />
   	</form>
 </body>
