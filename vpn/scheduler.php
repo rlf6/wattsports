@@ -4,8 +4,8 @@ ini_set('display_errors', 1);
 
 include("../database.php");
 
-$active1 ='active';
-$active2 ='';
+$active1 ='';
+$active2 ='active';
 $active3 ='';
 $active4 ='';
  $Title = "Wattsports";
