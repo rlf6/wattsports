@@ -63,10 +63,10 @@ $x=($round-1)*($m/2)
 
 for($p; $p < ($m/2)
 {
-	games[$x][0]=part1[$i];
-	games[$x][1]=part2[$i];
+	games[$x][0]=part1[$p];
+	games[$x][1]=part2[$p];
 	$x++;
-{
+}
 $round++
 //loop round 2 to number of rounds
 for($round; $round <= $rounds; $round++)
@@ -86,9 +86,63 @@ for($round; $round <= $rounds; $round++)
 		$temp1 = $temp2;
 	}
 	$part1[1]=$temp1;
-	$x = ($round-1)*($m/2)
-	
+	$x = ($round-1)*($m/2)	
+	if (($num_teams % 2) == 0)
+	{ $p = 0;}
+	else
+	{ $p = 1;}
+	for($p; $p < ($m/2)
+	{
+		games[$x][0]=part1[$p];
+		games[$x][1]=part2[$p];
+		$x++;
+	}
+	$round++;
 }
+
+//=============calculate available slots====================
+//calculate days
+public function getNumberOfDays($startDate, $endDate, $exclude)
+{
+    // d/m/Y
+    $start = new DateTime($startDate);
+    $end = new DateTime($endDate);
+    $oneday = new DateInterval("P1D");
+	$x= 0;
+	
+    $days = array();
+
+    /* Iterate from $start up to $end+1 day, one day in each iteration.
+    We add one day to the $end date, because the DatePeriod only iterates up to,
+    not including, the end date. */
+    foreach(new DatePeriod($start, $oneday, $end->add($oneday)) as $day) {
+        $day_num = $day->format("N"); /* 'N' number days 1 (mon) to 7 (sun) */
+        if($exclude)
+		{
+			if($day_num < 6) { /* weekday */
+				$days[$x] = $day->format("Y-m-d");
+				$x++;
+			} 
+		}
+		else
+		{
+				$days[$x] = $day->format("Y-m-d");
+				$x++;
+		}
+    }
+
+    return $days;       
+}
+
+if (!($_POST['weekends']))
+{
+	$exclude=true;
+}
+else
+{	$exclude=false;	}
+$daysArray = getNumberOfDays($date_start_php, $date_end_php, $exclude);
+
+
 
 
 
