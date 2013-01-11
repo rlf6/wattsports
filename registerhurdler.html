@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Register Hurdler</title>
+</head>
+
+<body>
+	<script>
+	function validateDate( input )
+	{
+		var bits = input.split( '-' );
+		var phpdate = new Date( bits[2], --bits[1], bits[0] );
+		if( phpdate.getFullYear( ) == bits[2] && phpdate.getMonth( ) == bits[1] )
+		{
+			return true;
+		}
+		return false;
+	}
+
+	function validateForm( form )
+	{
+		if( !validateDate( form.hurdler_dob.value ) )
+		{
+			alert( "Invalid date of birth.\nFormat: DD-MM-YYYY" );
+			return false;
+	        }
+
+		return true;
+	}
+	</script>
+
+	<h1>Register Hurdler</h1>
+        <form  method="POST" onsubmit="return validateForm(this);" action="./hurdler_insert.php" >
+        	<p> First Name <input name="hurdler_name" type="text" /></p>
+        	<p> Surname <input name="hurdler_surname" type="text" /></p>
+	        <p> Address <input name="hurdler_address" type="text" /></p> 
+	 	<p> Phone <input name="hurdler_phone" type="text" /></p>
+	 	<p> Email <input name="hurdler_email" type="text" /></p>
+	 	<p> Date of Birth <input name="hurdler_dob" type="text" /></p>
+
+	 	<input name="hurdler_sex" type="radio" value="m" checked />Male<br>
+	 	<input name="hurdler_sex" type="radio" value="f" />Female<br>
+
+	 	<p> Previous Best <input name="hurdler_previous_best" type="text" /></p>
+	 	<input type="submit" title="submit" />
+  	</form>
+</body>
+</html>

@@ -143,6 +143,28 @@ else
 $daysArray = getNumberOfDays($date_start_php, $date_end_php, $exclude);
 
 
+=======
+	//for an even number of teams, start at the first pair
+	if (($num_teams % 2) == 0)
+	{
+		$p = 0;
+	}
+	else
+	//for an odd number of teams, ignore the first pair
+	{
+		$p = 1;
+	}
+	for($p; $p < ($m/2)
+	{
+		games[$x][0]=part1[$i];
+		games[$x][1]=part2[$i];
+		$x++;
+	}
+	$round++
+	
+}
+//===========calculate available slots============
+//calculate days
 
 
 ?>
