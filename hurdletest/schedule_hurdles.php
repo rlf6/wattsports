@@ -26,7 +26,7 @@
   	</form>
 	<br>
 	<h1>Create the schedule for a wattball event</h1>
-        <form  method="POST" action="./create_schedule_wattball.php">
+	   <form  method="POST" action="./create_schedule_wattball.php">
 	 	Event: <select name="event_id">
 	 	<?php
 	 	mysql_connect('localhost','wattspor','wattball10');
@@ -40,7 +40,7 @@
 	 		echo '<option value="'.$event_id.'">'.$event_name.'</option>';
 	 	}
 	 	?>
-	 	</select><br><br>
+	 	</select>
 		<h3> Options </h3>
 		Tournament day begins (24h): 
 			<select name="begin_h">
@@ -74,7 +74,21 @@
 		Include weekends?:
 		<input type="radio" name="weekends" value="Y">Yes</input>  
 		<input type="radio" name="weekends" value="N">No</input>
+  	
+		<h3>Pitches</h3>
+		//allows user to select from locations in database- of type pitch- which they would like to include in the tournament
+		<?php
+			$query = "SELECT location_id, locatin_name FROM location WHERE type='pitch' ORDER BY location_id ASC";
+			$result = mysql_query($query);
+			echo $query;
+
+			while( list($event_id, $event_name) = mysql_fetch_row($result) )
+			{
+				echo '<input type="checkbox" value="'.$location_id.'" checked=true>'.$location_name.'</input>';
+			}
+		?>
+	
 		<input type="submit" title="submit" />
-  	</form>
+	</form>
 </body>
 </html>
