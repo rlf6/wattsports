@@ -15,16 +15,13 @@ $num_lanes = 8;
 	$num_rows = mysql_num_rows( $result );
 	if( mysql_num_rows( $result ) < 1 )
 	{
-		echo "Error: No hurdlers to schedule";
+		echo "Error: No hurdlers to schedule.";
 		exit;
 	}
 	
 	// work out how many races need to be run
 	// lane distribution: random
-	$num_races_today = $num_rows / $num_lanes
-	
-	if( ( $num_races_today % $num_lanes ) > 0 )
-		$num_races_today++;
+	$num_races_today = ceil( $num_rows / $num_lanes ); // round up because we can't have half a race
 	
 	// Add hurdlers to races in breadth first fashion
 	$race_array = array( );
@@ -32,39 +29,27 @@ $num_lanes = 8;
 	while( $row = mysql_fetch_array( $results ) )
 	{
 		// GET RACE $race
-		$race = $race_array['$i'];
+		$race = $race_array[$i];
 		
-		// Count the number of free lanes
-		$j = 0;
-		$free = 0;
-		while( $j < $num_lanes )
+		// ADD THIS RUNNER TO FIRST AVAILABLE LANE
+		$j = 1;
+		while( $j <= $num_lanes )
 		{
-			if( $race['$j'] == NULL )
-				$free++;
-				
-			$j++;
-		}
-		
-		// Check there are free lanes in this race
-		if( $free < 1 )
-		{
-			echo "Error: No free lanes in race " . $i . ".";
-			return;
-		}
-				
-		// ADD THIS RUNNER TO RANDOM LANE (unless it's full)
-		$j = rand(1, $num_lanes);
-		$tried = 0;
-		while( $tried <= 100 ) // don't try forever
-		{
-			if( $race['$j'] == NULL ) // is this lane available?
+			if( !isset( $race[$j] ) ) // is this lane available?
 			{
-				$race['$j'] = $row['id'];
+				echo "Added hurdler '" . $row['id'] . "' to lane " . $j . " of race " . $i . "<br>";
+				$race_array[$i][$j] = $row['id']; // $race does not exist outside of this loop, stupid. $race_array does.
 				break;
 			}
 			
-			$j = rand(1, $num_lanes); // try the next lane
-			$tried++;
+			$j++; // try the next lane
+		}
+		
+		// Error handling
+		if( $j > $num_lanes )
+		{
+			echo "Error: Out of lanes to put hurdlers in; Not yet out of hurdlers to put in lanes.";
+			exit;
 		}
 		
 		// Error handling
@@ -76,25 +61,33 @@ $num_lanes = 8;
 		
 		// CHOOSE NEXT RACE
 		// Wrap around to first race
-		if( $i == $num_races_today )
-			$i = 0;
+		if( $i >= $num_races_today )
+			$i = 0; 
 			
 		// Get next race
 		$i++;
 	}
 	
+	// SHUFFLE THE LANES
+	// we've put all the hurdlers in races, so now we shuffle the lanes within those races
+	// this is much simpler than adding the hurdlers to the array in a random order
+	for( $i = 1; $i <= $num_races_today; $i++ )
+	{
+		shuffle( $race_array[$i] );
+	}
+	
 	// PRINT OUTPUT
-	echo "\n\n\n";
+	echo "<br><br><br>";
 	foreach ($race_array as $race)
 	{
-		echo "RACE**********************\n";
+		echo "RACE**********************<br>";
 		
 		foreach ($race as $lane)
 		{
-			echo "Hurdler ID: " . $lane . "\n";
+			echo "Hurdler ID: " . $lane . "<br>";
 		}
 		
-		echo "\n";
+		echo "<br>";
 	}
 	
 	mysql_close( );
