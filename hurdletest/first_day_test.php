@@ -37,7 +37,7 @@ $num_lanes = 8;
 	$i = 1;
 	while( $row = mysql_fetch_array( $result ) )
 	{
-		echo "Hurdler: " . $row['id'] . "<br>";
+		echo "Hurdler: " . $num_races_today . "<br>";
 		
 		// GET RACE $race
 		$race = $race_array[$i];
@@ -48,7 +48,7 @@ $num_lanes = 8;
 		{
 			if( !isset( $race[$j] ) ) // is this lane available?
 			{
-				echo "Added hurdler to lane " . $j . "\n";
+				echo "Added hurdler to lane " . $j . "<br>";
 				$race[$j] = $row['id'];
 				break;
 			}
@@ -64,7 +64,7 @@ $num_lanes = 8;
 		}
 		
 		// CHOOSE NEXT RACE
-		if( $i < $num_races_today )
+		if( $i < $num_races_today - 1 )
 			$i++; // Get next race
 		else
 			$i = 1; // Wrap around to first race
