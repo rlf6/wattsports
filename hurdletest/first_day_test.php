@@ -46,8 +46,8 @@ $num_lanes = 8;
 		{
 			if( !isset( $race[$j] ) ) // is this lane available?
 			{
-				echo "Added hurdler '" . intval( $row['id'] ) . "' to lane " . $j . " of race " . $i . "<br>";
-				$race[$j] = intval( $row['id'] );
+				echo "Added hurdler '" . $row['id'] . "' to lane " . $j . " of race " . $i . "<br>";
+				$race_array[$i][$j] = $row['id'];
 				break;
 			}
 			
