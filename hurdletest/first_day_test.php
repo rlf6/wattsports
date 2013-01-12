@@ -22,7 +22,7 @@ $num_lanes = 8;
 	// so do it the same way as following days
 	$num_races_today = $num_rows / $num_lanes;
 	
-	if( ( $num_races_today % $num_lanes ) > 0 )
+	if( ( $num_rows % $num_lanes ) > 0 )
 		$num_races_today++;
 	
 	// Add hurdlers to races in breadth first fashion
