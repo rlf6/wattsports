@@ -20,7 +20,7 @@ $num_lanes = 8;
 	// work out how many races need to be run
 	// lane distribution not specified
 	// so do it the same way as following days
-	$num_races_today = $num_rows / $num_lanes
+	$num_races_today = $num_rows / $num_lanes;
 	
 	if( ( $num_races_today % $num_lanes ) > 0 )
 		$num_races_today++;
