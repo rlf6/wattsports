@@ -27,9 +27,18 @@ $num_lanes = 8;
 	
 	// Add hurdlers to races in breadth first fashion
 	$race_array = array( );
+	
+	// Initialise the array
+	for( $i = 1; i <= $num_race_today; $i++ )
+	{
+		$race_array[$i] = array( );
+	}
+	
 	$i = 1;
 	while( $row = mysql_fetch_array( $result ) )
 	{
+		echo "Hurdler: " . $row['id'] . "\n";
+		
 		// GET RACE $race
 		$race = $race_array[$i];
 		
@@ -37,7 +46,7 @@ $num_lanes = 8;
 		$j = 1;
 		while( $j <= $num_lanes )
 		{
-			if( $race[$j] == NULL ) // is this lane available?
+			if( !isset( $race[$j] ) ) // is this lane available?
 			{
 				$race[$j] = $row['id'];
 				break;
