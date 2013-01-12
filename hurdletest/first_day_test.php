@@ -2,15 +2,7 @@
 error_reporting(E_ALL); 
 ini_set('display_errors', 1); 
 	
-//include("../database.php");
-
-$host = 'localhost'; // Host name (normally 'localhost')
-$username = 'wattspor'; // MySQL login username
-$password = 'wattball10'; // MySQL login password
-$database = 'wattspor_database'; // Database name#
-
-mysql_connect($host, $username, $password);
-mysql_select_db($database);
+include("../database.php");
 
 $num_lanes = 8;
 
@@ -39,7 +31,7 @@ $num_lanes = 8;
 	while( $row = mysql_fetch_array( $results ) )
 	{
 		// GET RACE $race
-		$race = $race_array['$i'];
+		$race = $race_array[$i];
 		
 		// ADD THIS RUNNER TO FIRST AVAILABLE LANE
 		$j = 1;
