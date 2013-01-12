@@ -46,7 +46,7 @@ $num_lanes = 8;
 		$j = 1;
 		while( $j <= $num_lanes )
 		{
-			if( !array_key_exists( $j, $race ) ) // is this lane available?
+			if( !array_key_exists( $j, $race_array[$i] ) ) // is this lane available?
 			{
 				echo "Added hurdler to lane " . $j . "\n";
 				$race[$j] = $row['id'];
