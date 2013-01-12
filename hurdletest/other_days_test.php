@@ -88,22 +88,14 @@ $num_lanes = 8;
 		// Put the next fastest hurdler in Center + (i / 2) rounded up
 		// And the one after that in Center - (i+1 / 2) rounded up
 		$j = 1;
-		while( ($j < count( $race_array[$i] ) - 1) && ($j > -(count( $race_array[$i] ) - 1)) ) // oh dear.
+		$negative = 1;
+		while( $j < count( $race_array[$i] ) - 1 ) // oh dear.
 		{
-			$lane = $center_lane + ceil($j / 2);
+			$lane = $center_lane + ( $negative * ceil($j / 2) );
 			$new_race_array[$i][$lane] = $race_array[$i][$j+1]; // Urgh. Arrays are out of sync.
 			
-			// Make J bigger and invert it
-			if( $j > 0 )
-			{
-				$j++;
-				$j *= -1;
-			}
-			else if( $j < 0 )
-			{
-				$j *= -1;
-				$j++;
-			}
+			$j++;
+			$negative *= -1;
 		}
 	}
 	
