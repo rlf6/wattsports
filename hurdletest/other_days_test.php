@@ -72,7 +72,7 @@ $num_lanes = 8;
 	// Hurdlers were added in order of descending speed
 	// So fastest should be at the top
 	$center_lane = ceil( $num_lanes / 2 );
-	echo "<br><b>Center Lane: " .$center_lane . "<b><br>";	
+	echo "<br><b>Center Lane: " .$center_lane . "</b><br>";	
 	
 	// Create a new array, same dimensions as $race_array
 	$new_race_array = array( );
@@ -93,6 +93,8 @@ $num_lanes = 8;
 		{
 			$lane = $center_lane + ( $negative * ceil($j / 2) );
 			$new_race_array[$i][$lane] = $race_array[$i][$j+1]; // Urgh. Arrays are out of sync.
+			
+			echo "Added hurdler '" . $race_array[$i][$j+1] . "' to lane " . $lane . " of race " . $i . "<br>";
 			
 			$j++;
 			$negative *= -1;
