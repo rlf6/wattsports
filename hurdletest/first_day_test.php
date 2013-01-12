@@ -157,7 +157,7 @@ function lane_day( $day )
 			
 			// Put the next fastest hurdler in Center + (i / 2) rounded up
 			// And the one after that in Center - (i+1 / 2) rounded up
-			for( $j = 2; $j <= count( $lanes ); $j++ )
+			for( $j = 2; $j <= count( $race_array[$i] ); $j++ )
 			{
 				$lane = $center_lane + ceil($j / 2);
 				$new_race_array[$i][$lane] = $race_array[$i][$j];
