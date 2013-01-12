@@ -70,7 +70,7 @@
 	// which indicates that this is the final race	
 	$num_hurdlers_today = $num_hurdlers;
 	$i = 0;
-	while( $num_hurdlers_today >= $num_lanes && $i<10)
+	while( $num_hurdlers_today >= $num_lanes && ($i < 10) )
 	{
 		// Add this day
 		$num_days++;
