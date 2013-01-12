@@ -25,6 +25,13 @@ $num_lanes = 8;
 	
 	// Add hurdlers to races in breadth first fashion
 	$race_array = array( );
+	
+	// Initialise the array
+	for( $i = 1; $i <= $num_races_today; $i++ )
+	{
+		$race_array[$i] = array( );
+	}
+	
 	$i = 1;
 	while( $row = mysql_fetch_array( $result ) )
 	{
@@ -50,13 +57,6 @@ $num_lanes = 8;
 		{
 			echo "Error: Out of lanes to put hurdlers in; Not yet out of hurdlers to put in lanes.";
 			exit;
-		}
-		
-		// Error handling
-		if( $tried = 100 )
-		{
-			echo "Error: Tried one hundred times to find the free lane in race " . $i . ".";
-			return;
 		}
 		
 		// CHOOSE NEXT RACE
