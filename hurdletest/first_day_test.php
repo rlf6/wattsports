@@ -31,15 +31,15 @@ $num_lanes = 8;
 	while( $row = mysql_fetch_array( $result ) )
 	{
 		// GET RACE $race
-		$race = $race_array['$i'];
+		$race = $race_array[$i];
 		
 		// ADD THIS RUNNER TO FIRST AVAILABLE LANE
 		$j = 1;
 		while( $j <= $num_lanes )
 		{
-			if( $race['$j'] == NULL ) // is this lane available?
+			if( $race[$j] == NULL ) // is this lane available?
 			{
-				$race['$j'] = $row['id'];
+				$race[$j] = $row['id'];
 				break;
 			}
 			
