@@ -28,10 +28,10 @@ $num_lanes = 8;
 	// Add hurdlers to races in breadth first fashion
 	$race_array = array( );
 	$i = 1;
-	while( $row = mysql_fetch_array( $results ) )
+	while( $row = mysql_fetch_array( $result ) )
 	{
 		// GET RACE $race
-		$race = $race_array[$i];
+		$race = $race_array['$i'];
 		
 		// ADD THIS RUNNER TO FIRST AVAILABLE LANE
 		$j = 1;
