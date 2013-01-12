@@ -78,6 +78,7 @@
 		// work out how many races need to be run
 		$days[$num_days] = ceil( $num_hurdlers_today / $num_lanes );
 		echo "". ceil( $num_hurdlers_today / $num_lanes )."<br>";
+		echo "break;". $days[$num_days]."<br>";
 		
 		// if we've reached the last day (only one race for this day) then break.
 		if( $days[$num_days] = 1 )
