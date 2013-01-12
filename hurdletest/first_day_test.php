@@ -37,7 +37,7 @@ $num_lanes = 8;
 	$i = 1;
 	while( $row = mysql_fetch_array( $result ) )
 	{
-		echo "Hurdler: " . $row['id'] . "\n";
+		echo "Hurdler: " . $row['id'] . "<br>";
 		
 		// GET RACE $race
 		$race = $race_array[$i];
@@ -64,7 +64,7 @@ $num_lanes = 8;
 		
 		// CHOOSE NEXT RACE
 		// Wrap around to first race
-		if( $i == $num_races_today )
+		if( $i >= $num_races_today )
 			$i = 0;
 			
 		// Get next race
@@ -72,17 +72,17 @@ $num_lanes = 8;
 	}
 	
 	// PRINT OUTPUT
-	echo "\n\n\n";
+	echo "<br><br><br>";
 	foreach ($race_array as $race)
 	{
-		echo "RACE**********************\n";
+		echo "RACE**********************<br>";
 		
 		foreach ($race as $lane)
 		{
-			echo "Hurdler ID: " . $lane . "\n";
+			echo "Hurdler ID: " . $lane . "<br>";
 		}
 		
-		echo "\n";
+		echo "<br>";
 	}
 	
 	mysql_close( );
