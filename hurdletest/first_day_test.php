@@ -29,7 +29,7 @@ $num_lanes = 8;
 	$race_array = array( );
 	
 	// Initialise the array
-	for( $i = 1; i <= $num_race_today; $i++ )
+	for( $i = 1; $i <= $num_races_today; $i++ )
 	{
 		$race_array[$i] = array( );
 	}
