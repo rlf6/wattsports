@@ -70,19 +70,17 @@
 	// which indicates that this is the final race	
 	$num_hurdlers_today = $num_hurdlers;
 	$i = 0;
-	//while( $num_hurdlers_today >= $num_lanes && ($i < 10) )
+	while( $num_hurdlers_today >= $num_lanes && ($i < 10) )
 	{
 		// Add this day
 		$num_days++;
 		
 		// work out how many races need to be run
 		$days[$num_days] = ceil( $num_hurdlers_today / $num_lanes );
-		echo "". ceil( $num_hurdlers_today / $num_lanes )."<br>";
-		echo "break;". $days[$num_days]."<br>";
 		
 		// if we've reached the last day (only one race for this day) then break.
-		if( $days[$num_days] = 1 )
-			echo "break;". $days[$num_days]."<br>";
+		if( $days[$num_days] == 1 )
+			break;
 		
 		// Half the number of hurdlers
 		$num_hurdlers_today = ( $num_hurdlers_today / 2 );
