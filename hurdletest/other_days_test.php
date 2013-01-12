@@ -102,7 +102,7 @@ $num_lanes = 8;
 	
 	// PRINT OUTPUT
 	echo "<br><br><br>";
-	foreach ($race_array as $race)
+	foreach ($new_race_array as $race)
 	{
 		echo "RACE**********************<br>";
 		
