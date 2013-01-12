@@ -84,12 +84,13 @@ $num_lanes = 8;
 	{
 		// Put the fastest hurdler in the center
 		$new_race_array[$i][$center_lane] = $race_array[$i][1];
+		echo "Added hurdler '" . $race_array[$i][1] . "' to lane " . $center_lane . " of race " . $i . "<br>";
 		
 		// Put the next fastest hurdler in Center + (i / 2) rounded up
 		// And the one after that in Center - (i+1 / 2) rounded up
 		$j = 1;
 		$negative = 1;
-		while( $j < count( $race_array[$i] ) - 1 ) // oh dear.
+		while( $j < count( $race_array[$i] ) ) // oh dear.
 		{
 			$lane = $center_lane + ( $negative * ceil($j / 2) );
 			$new_race_array[$i][$lane] = $race_array[$i][$j+1]; // Urgh. Arrays are out of sync.
