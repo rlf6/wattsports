@@ -77,10 +77,11 @@
 		
 		// work out how many races need to be run
 		$days[$num_days] = ceil( $num_hurdlers_today / $num_lanes );
+		echo "". ceil( $num_hurdlers_today / $num_lanes )."<br>";
 		
 		// if we've reached the last day (only one race for this day) then break.
 		if( $days[$num_days] = 1 )
-			echo "break;";
+			echo "break;". $days[$num_days]."<br>";
 		
 		// Half the number of hurdlers
 		$num_hurdlers_today = ( $num_hurdlers_today / 2 );
@@ -93,7 +94,7 @@
 	}
 
 	// PRINT OUTPUT
-	echo "Number of days needed for hurdle tournament: ".$num_days;
+	echo "Number of days needed for hurdle tournament: ".$num_days . "<br>";
 	
 	//for( $i = 0; i < count( $days ); $i++ )
 		echo "Day " . $i . " has " . $days[$i] . " races<br>";
