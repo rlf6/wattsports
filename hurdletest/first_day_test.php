@@ -48,6 +48,7 @@ $num_lanes = 8;
 		{
 			if( !isset( $race[$j] ) ) // is this lane available?
 			{
+				echo "Added hurdler to lane " . $j . "\n";
 				$race[$j] = $row['id'];
 				break;
 			}
@@ -65,10 +66,9 @@ $num_lanes = 8;
 		// CHOOSE NEXT RACE
 		// Wrap around to first race
 		if( $i >= $num_races_today )
-			$i = 0;
-			
-		// Get next race
-		$i++;
+			$i = 1;
+		else
+			$i++; // Get next race
 	}
 	
 	// PRINT OUTPUT
