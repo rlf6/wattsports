@@ -69,7 +69,8 @@
 	// Loop through days until everyone fits on the same track
 	// which indicates that this is the final race	
 	$num_hurdlers_today = $num_hurdlers;
-	while( $num_hurdlers_today >= $num_lanes )
+	$i = 0;
+	while( $num_hurdlers_today >= $num_lanes && $i<10)
 	{
 		// Add this day
 		$num_days++;
@@ -87,6 +88,8 @@
 		// Round up to the nearest multiple of $num_lanes (unless it's smaller than the number of lanes
 		if( ( $num_hurdlers_today % $num_lanes ) > 0 )
 			$num_hurdlers_today += ( $num_lanes - ( $num_hurdlers_today % $num_lanes ) );
+			
+		$i++;
 	}
 
 	// PRINT OUTPUT
