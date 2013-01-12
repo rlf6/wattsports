@@ -69,7 +69,7 @@
 	// Loop through days until everyone fits on the same track
 	// which indicates that this is the final race	
 	$num_hurdlers_today = $num_hurdlers;
-	while( $num_hurdlers_today >= $num_lanes) )
+	while( $num_hurdlers_today >= $num_lanes )
 	{
 		// Add this day
 		$num_days++;
