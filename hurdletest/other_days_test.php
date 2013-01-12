@@ -72,7 +72,7 @@ $num_lanes = 8;
 	// Hurdlers were added in order of descending speed
 	// So fastest should be at the top
 	$center_lane = ceil( $num_lanes / 2 );
-	echo "Center Lane: " .$center_lane . "<br>";	
+	echo "<br><b>Center Lane: " .$center_lane . "<b><br>";	
 	
 	// Create a new array, same dimensions as $race_array
 	$new_race_array = array( );
@@ -87,22 +87,31 @@ $num_lanes = 8;
 		
 		// Put the next fastest hurdler in Center + (i / 2) rounded up
 		// And the one after that in Center - (i+1 / 2) rounded up
-		for( $j = 2; $j < count( $race_array[$i] ); $j++ )
+		$j = 1;
+		while( ($j < count( $race_array[$i] ) - 1) && ($j > -(count( $race_array[$i] ) - 1)) ) // oh dear.
 		{
 			$lane = $center_lane + ceil($j / 2);
-			$new_race_array[$i][$lane] = $race_array[$i][$j];
+			$new_race_array[$i][$lane] = $race_array[$i][$j+1]; // Urgh. Arrays are out of sync.
 			
-			$j++;
-			$lane = $center_lane - ceil($j / 2);
-			$new_race_array[$i][$lane] = $race_array[$i][$j];
-		}		
+			// Make J bigger and invert it
+			if( $j > 0 )
+			{
+				$j++;
+				$j *= -1;
+			}
+			else if( $j < 0 )
+			{
+				$j *= -1;
+				$j++;
+			}
+		}
 	}
 	
 	$race_array = $new_race_array;
 	
 	// PRINT OUTPUT
 	echo "<br><br><br>";
-	foreach ($new_race_array as $race)
+	foreach ($race_array as $race)
 	{
 		echo "RACE**********************<br>";
 		
