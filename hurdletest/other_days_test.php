@@ -106,13 +106,13 @@ $num_lanes = 8;
 	
 	// PRINT OUTPUT
 	echo "<br><br><br>";
-	foreach ($race_array as $race)
+	for( $i = 1; $i <= count( $race_array ); $i++ )
 	{
 		echo "RACE**********************<br>";
 		
-		foreach ($race as $lane)
+		for( $j = 1; $j <= count( $race_array[$i] ); $j++ )
 		{
-			echo "Hurdler ID: " . $lane . "<br>";
+			echo "Hurdler ID: " . $race_array[$i][$j] . "<br>";
 		}
 		
 		echo "<br>";
