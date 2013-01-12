@@ -39,14 +39,13 @@
 					// MOVE THIS TO SETTINGS
 
 	// ========== Work out how many days will be needed for the competition ==========
+	// ================ And how many races will be needed on each day ================
+	$days = array( );
 	$num_days = 0;
-	$num_hurdlers_today = $num_hurdlers;
 
 	// Check that this competition is valid at all
 	// If there are *any* participants, then it will take at least one day
-	if( $num_hurdlers > 0 )
-		$num_days++;
-	else
+	if( $num_hurdlers < 1 )
 	{
 		echo "Error: No hurdlers registered for tournament.";
 		return;
@@ -60,28 +59,41 @@
 	{
 		echo "Information: " . $num_rows . " hurdler(s) with no previous best time on record.<br>
 				The initial day will be required.<p>";
+				
 		$num_days++;
+		
+		// work out how many races need to be run
+		$days[$num_days] = ceil( $num_rows / $num_lanes ); // round up because we can't have half a race
 	}
 
 	// Loop through days until everyone fits on the same track
-	// which indicates that this is the final race
-	while( !($num_hurdlers_today <= $num_lanes) )
+	// which indicates that this is the final race	
+	$num_hurdlers_today = $num_hurdlers;
+	while( $num_hurdlers_today >= $num_lanes) )
 	{
+		// Add this day
+		$num_days++;
+		
+		// work out how many races need to be run
+		$days[$num_days] = ceil( $num_hurdlers_today / $num_lanes );
+		
+		// if we've reached the last day (only one race for this day) then break.
+		if( $days[$num_days] = 1 )
+			break;
+		
 		// Half the number of hurdlers
 		$num_hurdlers_today = ( $num_hurdlers_today / 2 );
 		
-		// Round up to the nearest multiple of $num_lanes
+		// Round up to the nearest multiple of $num_lanes (unless it's smaller than the number of lanes
 		if( ( $num_hurdlers_today % $num_lanes ) > 0 )
-		{
 			$num_hurdlers_today += ( $num_lanes - ( $num_hurdlers_today % $num_lanes ) );
-		}
-
-		// Add this day
-		$num_days++;
 	}
 
+	// PRINT OUTPUT
 	echo "Number of days needed for hurdle tournament: ".$num_days;
-
+	
+	for( $i = 0; i < count( $days ); $i++ )
+		echo "Day " . $i . " has " . $days[$i] . " races<br>";
 
 	mysql_close( );
 ?>
