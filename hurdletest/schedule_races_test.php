@@ -80,7 +80,7 @@
 		
 		// if we've reached the last day (only one race for this day) then break.
 		if( $days[$num_days] = 1 )
-			echo "break;"
+			echo "break;";
 		
 		// Half the number of hurdlers
 		$num_hurdlers_today = ( $num_hurdlers_today / 2 );
