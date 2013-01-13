@@ -6,31 +6,28 @@
 
 	$num_lanes = 8; // This should be moved to a settings file somewhere	
 
-	// IN: Array of predefined races, Array of hurdlers to be 'lane-d'
+	// IN: Array of predefined races, Array of hurdlers (by ID) to be 'lane-d'
 	// OUT: Array of races with hurdlers in lanes
 	function allocate_lanes_basic( $race_array, $hurdlers )
 	{
 		$num_lanes = 8;
 		
 		// Add hurdlers to races in breadth first fashion	
-		$i = 1;
-		while( $row = mysql_fetch_array( $hurdlers ) )
+		$race = 1;
+		for( $i = 1; $i < count( $hurdlers ); $i++ )
 		{		
 			// GET RACE $race
-			$race = $race_array[$i];
+			$race_copy = $race_array[$race];
 			
 			// ADD THIS RUNNER TO FIRST AVAILABLE LANE
-			$j = 1;
-			while( $j <= $num_lanes )
+			for( $j = 1; $j <= $num_lanes; $j++ )
 			{
-				if( !isset( $race[$j] ) ) // is this lane available?
+				if( !isset( $race_copy[$j] ) ) // is this lane available?
 				{
-					echo "Added hurdler '" . $row['id'] . "' to lane " . $j . " of race " . $i . "<br>";
-					$race_array[$i][$j] = $row['id']; // $race does not exist outside of this loop, stupid. $race_array does.
+					echo "Added hurdler '" . $hurdlers[$i] . "' to lane " . $j . " of race " . $race . "<br>";
+					$race_array[$race][$j] = $hurdlers[$i]; // $race does not exist outside of this loop, stupid. $race_array does.
 					break;
 				}
-				
-				$j++; // try the next lane
 			}
 			
 			// Error handling
@@ -42,20 +39,20 @@
 			
 			// CHOOSE NEXT RACE
 			// Wrap around to first race
-			if( $i >= count($race_array) )
-				$i = 0; 
+			if( $race >= count($race_array) )
+				$race = 0; 
 				
 			// Get next race
-			$i++;
+			$race++;
 		}
 		
 		// return the array of races and hurdlers
 		return $race_array;
 	}
 
-	// IN: A "day" to allocate
+	// IN: An array of hurdlers to allocate to lanes, and "day" (style of allocation: random, non-random, etc.)
 	// OUT: Array of races with hurdlers in *correct* lanes
-	function allocate_lanes( $day )
+	function allocate_lanes( $hurdlers, $day )
 	{
 		$num_lanes = 8;
 		
@@ -65,42 +62,21 @@
 			echo "Error: Tried to allocate lanes for an invalid day!";
 			return;
 		}
-		
-		$race_array = array( );
-		
-		// Build the query
-		$query = "";
-		if( $day == 1 )
-			$query = "SELECT * FROM hurdler WHERE previous_best IS NULL";	
-		else if( $day == 2 )
-			$query = "SELECT * FROM hurdler ORDER BY previous_best ASC";
-		else if( $day >= 3 )
-		{
-			// number of competitors today is
-			// ((number of competitors on previous day / 2 ) rounded up to nearest multiple of number of lanes)
-			$query = "SELECT * FROM hurdler ORDER BY previous_best ASC"; // <------------------------------THIS IS WRONG--------------------------
-		}
-		
-		$result = mysql_query( $query );
-		$num_rows = mysql_num_rows( $result );
-		if( mysql_num_rows( $result ) < 1 )
-		{
-			echo "Error: Tried to allocate lanes on day '" . $day . "', but no hurdlers to schedule!";
-			return;
-		}
-		
+
 		// work out how many races need to be run
-		$num_races_today = ceil( $num_rows / $num_lanes ); // round up because we can't have half a race
+		$num_races_today = ceil( count( $hurdlers ) / $num_lanes ); // round up because we can't have half a race
 		
 		// Initialise the array
+		$race_array = array( );
 		for( $i = 1; $i <= $num_races_today; $i++ )
 		{
 			$race_array[$i] = array( );
 		}
 		
-		// ALLOCATE LANES
-		$race_array = allocate_lanes_basic( $race_array, $result );
+		// ALLOCATE HURDLERS TO RACES
+		$race_array = allocate_lanes_basic( $race_array, $hurdlers );
 		
+		// Special cases for days greater than 1
 		if( $day == 2 )
 		{
 			// SHUFFLE LANES
@@ -130,8 +106,8 @@
 				
 				// Put the next fastest hurdler in Center + (i / 2) rounded up
 				// And the one after that in Center - (i+1 / 2) rounded up
-				$negative = 1;
-				for( $j = 1; $j < count( $race_array[$i] ); $j++ ) // oh dear.
+				$negative = 1; // oh dear. well, at least it works
+				for( $j = 1; $j < count( $race_array[$i] ); $j++ )
 				{
 					$lane = $center_lane + ( $negative * ceil($j / 2) );
 					$new_race_array[$i][$lane] = $race_array[$i][$j+1]; // Urgh. Arrays are out of sync.
@@ -149,8 +125,46 @@
 		return $race_array;
 	}
 	
-	//==================================MAIN ALGORITHM==================================
-	$race_array = allocate_lanes( 1 );
+	//==================================MAIN ALGORITHM==================================	
+	$day = 1;
+	$hurdlers = array( ); // an array of hurdler IDs to allocate to lanes
+	
+	// Special handling for days less than three
+	if( $day < 3 )
+	{
+		// Build the query
+		$query = "";
+		
+		if( $day == 1 )
+			$query = "SELECT * FROM hurdler WHERE previous_best IS NULL ORDER BY id"; //day1
+		else
+			$query = "SELECT * FROM hurdler ORDER BY previous_best ASC"; //day2
+		
+		// Run de query
+		$result = mysql_query( $query );
+		$num_rows = mysql_num_rows( $result );
+		if( mysql_num_rows( $result ) < 1 )
+		{
+			echo "Error: Tried to allocate lanes on day '" . $day . "', but no hurdlers to schedule!";
+			return;
+		}
+
+		// Could probably just make the query "SELECT id" and use the $result, but I think it's better this way
+		for( $i = 1; $i < $num_rows; $i++ )
+		{
+			$row = mysql_fetch_row( $result );		
+			$hurdlers[$i] = $row['id'];
+		}
+	}
+	
+	/* DAY 3
+		// number of competitors today is
+		// ((number of competitors on previous day / 2 ) rounded up to nearest multiple of number of lanes)
+		$query = "SELECT * FROM hurdler ORDER BY previous_best ASC"; // <------------------------------THIS IS WRONG--------------------------
+	*/
+	
+	// ALLOCATE LANES
+	$race_array = allocate_lanes( $hurdlers, $day );
 	
 	// PRINT OUTPUT
 	echo "<br><br><br>";
