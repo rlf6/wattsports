@@ -128,7 +128,7 @@
 			$race_time[2] += $time_between_races[2]; //S
 		}
 		
-		$race_date[1]++; // Increment days by 1
+		$race_date[0]++; // Increment days by 1
 	}
 
 	
