@@ -107,7 +107,7 @@
 	$date_start_array = explode(" ", date("j n Y", $date_start_php));
 	echo "<p>Start Date: " . $date_start_array[0] . " / " . $date_start_array[1] . " / " . $date_start_array[2] . "<br>";
 	
-	// Create a new array to hold the start timedates for each race
+	// Create a new 2d-array to hold the start timedates for each race
 	$race_times = array( );
 	for( $i = 1; $i <= count( $days ); $i++ )
 		$race_times[$i] = array( );
@@ -120,7 +120,8 @@
 		for( $j = 1; $j <= $days[$i]; $j++ )
 		{
 			$race_times[$i][$j] = mktime( $race_time[0], $race_time[1], $race_time[2], $race_date[1], $race_date[0], $race_date[2]);
-			echo "Day " . $i . ", race " . $j . " scheduled at: " . date("F j Y g:i a.", $race_times[$i][$j]) . "<br>";
+			echo "Day " . $i . ", race " . $j . " scheduled on: " . date("F j Y", $race_times[$i][$j]);
+			echo ", at " . date("g:i a", $race_times[$i][$j]) . "<br>";
 			
 			// Set race_time to be asap (i.e. now + downtime)
 			$race_time[0] += $time_between_races[0]; //H
@@ -130,7 +131,6 @@
 		
 		$race_date[0]++; // Increment days by 1
 	}
-
 	
 	mysql_close( );
 ?>
