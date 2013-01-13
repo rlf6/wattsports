@@ -10,6 +10,8 @@
 	// OUT: Array of races with hurdlers in lanes
 	function allocate_lanes_basic( $race_array, $hurdlers )
 	{
+		$num_lanes = 8;
+		
 		// Add hurdlers to races in breadth first fashion	
 		$i = 1;
 		while( $row = mysql_fetch_array( $hurdlers ) )
@@ -55,6 +57,8 @@
 	// OUT: Array of races with hurdlers in *correct* lanes
 	function allocate_lanes( $day )
 	{
+		$num_lanes = 8;
+		
 		// Check $day is valid
 		if( $day < 1 )
 		{
@@ -95,7 +99,7 @@
 		}
 		
 		// ALLOCATE LANES
-		$race_array = schedule_day( $race_array, $result );
+		$race_array = allocate_lanes_basic( $race_array, $result );
 		
 		if( $day == 2 )
 		{
