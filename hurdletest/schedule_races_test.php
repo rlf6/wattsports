@@ -97,19 +97,40 @@
 	for( $i = 1; $i <= count( $days ); $i++ )
 		echo "Day " . $i . " has " . $days[$i] . " races<br>";
 
-	// Facility opening hours
-	$open_hour = 9; // TESTING ONLY
-	$open_minute = 0; // TESTING ONLY	
-	$close_hour = 17; // TESTING ONLY
-	$close_minute = 0; // TESTING ONLY
+	// Facility opening hours (hours, minutes, seconds)
+	$opening_time = array( 9, 0, 0 ); // TESTING ONLY
+	$closing_time = array( 15, 0, 0 ); // TESTING ONLY
+	$time_between_races = array( 0, 30, 0 ); // TESTING ONLY
 	
 	// CALCULATE EARLIEST POSSIBLE RACE SLOT
 	$date_start_array = explode(" ", date("j n Y", $date_start_php));
 	echo "Start Date = " . $date_start_array[0] . " / " . $date_start_array[1] . " / " . $date_start_array[2] . "<br>";
 	
-	$race_date = mktime( $open_hour, $open_minute, 0, $date_start_array[1], $date_start_array[0], $date_start_array[2]);
+	// Create a new array to hold the start timedates for each race
+	$race_times = array( );
+	for( $i = 1; $i <= count( $days ); $i++ )
+		$race_times[$i] = array( );
 	
-	echo date("F j Y g:i a.",$race_date );
+	// Add however many races are needed on each of the days
+	for( $i = 1; $i <= count( $days ); $i++ )
+	{
+		$race_time = $opening_time;
+		$race_date = $date_start_array;
+		
+		for( $j = 1; $j <= $days[$i]; $j++ )
+		{
+			$race_times[$i][$j] = mktime( $race_time[0], $race_time[1], $race_time[2], $race_date[1], $race_date[0], $race_date[2]);
+			echo "Day " . $i . ", race " . $j . " scheduled at: " . date("F j Y g:i a.", $race_date );
+			
+			// Set race_time to be asap (i.e. now + downtime)
+			$race_time[0] += $time_between_races[0];
+			$race_time[1] += $time_between_races[1];
+			$race_time[2] += $time_between_races[2];
+		}
+	}
+	
+	//$race_date = mktime( $open_hour, $open_minute, 0, $date_start_array[1], $date_start_array[0], $date_start_array[2]);
+	//echo date("F j Y g:i a.", $race_date );
 
 	
 	mysql_close( );
