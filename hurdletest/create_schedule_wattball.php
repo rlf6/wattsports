@@ -102,6 +102,7 @@ for($round; $round <= $rounds; $round++)
 
 //=============calculate available slots====================
 //calculate days
+//our version of php possibly too old for this function
 public function getNumberOfDays($startDate, $endDate, $exclude)
 {
     // d/m/Y
@@ -112,14 +113,14 @@ public function getNumberOfDays($startDate, $endDate, $exclude)
 	
     $days = array();
 
-    /* Iterate from $start up to $end+1 day, one day in each iteration.
+    /*Iterate from $start up to $end+1 day, one day in each iteration.
     We add one day to the $end date, because the DatePeriod only iterates up to,
-    not including, the end date. */
+    not including, the end date.*/
     foreach(new DatePeriod($start, $oneday, $end->add($oneday)) as $day) {
-        $day_num = $day->format("N"); /* 'N' number days 1 (mon) to 7 (sun) */
+        $day_num = $day->format("N"); //'N' number days 1 (mon) to 7 (sun) 
         if($exclude)
 		{
-			if($day_num < 6) { /* weekday */
+			if($day_num < 6) { //weekday
 				$days[$x] = $day->format("Y-m-d");
 				$x++;
 			} 
@@ -140,7 +141,48 @@ if (!($_POST['weekends']))
 }
 else
 {	$exclude=false;	}
+
 $daysArray = getNumberOfDays($date_start_php, $date_end_php, $exclude);
+/* back-up incase we do not have new enough version of php to run above function
+$days = floor(abs($date_end_php - $date_start_php) / 86400); //floor gives num full days
+
+if (!($_POST['weekends']))
+{
+	$exclude=true;
+}
+else
+{	$exclude=false;	}*/
+//==============Matches per day
+//number of hours in a match day
+$hour= $_POST['begin_h'];
+$min= $_POST['behin_m'];
+$date= $hour . ":" . $min;
+$start_time = date ('H:i',strtotime($date));
+
+$hour= $_POST['end_h'];
+$min= $_POST['end_m'];
+$date= $hour . ":" . $min;
+$end_time = date ('H:i',strtotime($date));
+
+//$time = $end_time - $start_time; //returns time in seconds
+$time = ($end_time - $start_time)/60; //returns time in minutes
+$halfday = date("H:i", strtotime('+$time/2 minutes', $start_time));
+$matchtime = $_POST['duration'] + $_POST['gap']; //time needed per match (in minutes)
+$pitches = 4;//test value
+/*
+============here need to figure out how many pitches were selected on previous page
+*/
+//how many matches may be played per day?
+$matches = (($time/2)/$matchtime)*$pitches*2;
+
+//available slots
+$available = $matches*count($daysArray);
+
+if($available < $slots) //slots variable is the minimum number we need to play all games in round robin tournament
+{
+	echo "You do not have enough slots to play all matches in a round-robin tournament, you may need to add dates or pitches";
+	//==============here need to add option to cancel schedule creation or alter input
+}
 
 
 
