@@ -152,7 +152,7 @@
 		// Could probably just make the query "SELECT id" and use the $result, but I think it's better this way
 		for( $i = 1; $i < $num_rows; $i++ )
 		{
-			$row = mysql_fetch_row( $result );		
+			$row = mysql_fetch_array( $result );		
 			$hurdlers[$i] = $row['id'];
 		}
 	}
