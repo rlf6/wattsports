@@ -166,8 +166,10 @@ $end_time = date ('H:i',strtotime($date));
 
 //$time = $end_time - $start_time; //returns time in seconds
 $time = ($end_time - $start_time)/60; //returns time in minutes
-$halfday = date("H:i", strtotime('+$time/2 minutes', $start_time));
-$matchtime = $_POST['duration'] + $_POST['gap']; //time needed per match (in minutes)
+$halfday = date("H:i", strtotime('+'. $time/2 .' minutes', $start_time));
+$duration = $_POST['duration'];
+$gap =  $_POST['gap'];
+$matchtime = $duration + $gap; //time needed per match (in minutes)
 $pitches = 4;//test value
 /*
 ============here need to figure out how many pitches were selected on previous page
@@ -184,9 +186,66 @@ if($available < $slots) //slots variable is the minimum number we need to play a
 	//==============here need to add option to cancel schedule creation or alter input
 }
 
+//=============producing scheduling details===============================
+$played = array();
+//initialise an array representing whether each team has played this half day
+$played[$0] = true;
+for ($x = 1; $x < $num_teams; $x++)
+{
+	$played[$x] = false; //set to false
+}
+$newDay = true;
+$newAfternoon = false;
+$match_date = $date_start_php;
 
-
-
-
+for($i=0; $i< $slots; $i++)
+{
+	//set start and end times
+	while($found == false)//loop until valid times found
+	{
+		if($newDay == true)
+		{
+			$match_start = $start_time;
+			$newDay = false;
+		}
+		elseif ($newAfternoon == true)
+		{
+			$match_start = $halfday;
+			$newAfternoon = false;
+		}
+		else
+		{
+			$match_start = date("H:i", strtotime('+'. $gap .' minutes', $previous_end));
+		}
+		
+		$match_end = date("H:i", strtotime('+'. $duration .' minutes', $match_start));
+		//if match starts in morning but ends in afternoon
+		//new afternoon
+		if(($match_start < $halfday) && ($match_end > $halfday))
+		{
+			$newAfternoon = true;
+			for ($x = 1; $x < $num_teams; $x++)
+			{
+				$played[$x] = false; //set to false
+			}			
+		}		
+		//if match ends after day
+		//new day		//match_date next day
+		elseif($match_end > $end_time)
+		{
+			$newDay = true;
+			for ($x = 1; $x < $num_teams; $x++)
+			{
+				$played[$x] = false; //set to false
+			}
+			$prev = $match_date;
+			$match_date = strtotime("+1 day",strtotime($prev))
+		}
+		else
+		{
+			$found = true; //exit while loop
+		}
+	}
+}
 
 ?>
