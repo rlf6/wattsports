@@ -120,7 +120,7 @@
 		for( $j = 1; $j <= $days[$i]; $j++ )
 		{
 			$race_times[$i][$j] = mktime( $race_time[0], $race_time[1], $race_time[2], $race_date[1], $race_date[0], $race_date[2]);
-			echo "Day " . $i . ", race " . $j . " scheduled at: " . date("F j Y g:i a.", $race_date );
+			echo "Day " . $i . ", race " . $j . " scheduled at: " . date("F j Y g:i a.", $race_times[$i][$j] );
 			
 			// Set race_time to be asap (i.e. now + downtime)
 			$race_time[0] += $time_between_races[0];
