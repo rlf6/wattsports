@@ -97,5 +97,20 @@
 	for( $i = 1; $i <= count( $days ); $i++ )
 		echo "Day " . $i . " has " . $days[$i] . " races<br>";
 
+	// Facility opening hours
+	$open_hour = 9; // TESTING ONLY
+	$open_minute = 0; // TESTING ONLY	
+	$close_hour = 17; // TESTING ONLY
+	$close_minute = 0; // TESTING ONLY
+	
+	// CALCULATE EARLIEST POSSIBLE RACE SLOT
+	$date_start_array = explode(" ", date("j n Y", $date_start_php));
+	echo "Start Date = " . $date_start_array[0] . " / " . $date_start_array[1] . " / " . $date_start_array[2] . "<br>";
+	
+	$race_date = mktime( $open_hour, $open_minute, 0, $date_start_array[1], $date_start_array[0], $date_start_array[2]);
+	
+	echo date("F j Y g:i a.",$race_date );
+
+	
 	mysql_close( );
 ?>
