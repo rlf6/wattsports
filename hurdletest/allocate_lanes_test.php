@@ -149,6 +149,7 @@
 			return;
 		}
 
+		echo "Number of hurdlers: ".$num_rows;
 		// Could probably just make the query "SELECT id" and use the $result, but I think it's better this way
 		for( $i = 1; $i < $num_rows; $i++ )
 		{
