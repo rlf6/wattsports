@@ -65,7 +65,8 @@
 		$race_array = array( );
 		
 		// Build the query
-		if( day == 1 )
+		$query = "";
+		if( $day == 1 )
 			$query = "SELECT * FROM hurdler WHERE previous_best IS NULL";	
 		else if( $day == 2 )
 			$query = "SELECT * FROM hurdler ORDER BY previous_best ASC";

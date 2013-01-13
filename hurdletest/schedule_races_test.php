@@ -93,8 +93,7 @@
 	}
 
 	// PRINT OUTPUT
-	echo "Number of days needed for hurdle tournament: ".$num_days . "<br>";
-	
+	echo "Number of days needed for hurdle tournament: ".$num_days . "<br>";	
 	for( $i = 1; $i <= count( $days ); $i++ )
 		echo "Day " . $i . " has " . $days[$i] . " races<br>";
 
