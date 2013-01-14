@@ -156,7 +156,7 @@
 			$row = mysql_fetch_array( $result );		
 			$hurdlers[$i] = $row['id'];
 		}
-		echo "Number of Hurdlers in array: ".count( $hurdler )."<br>";
+		echo "Number of Hurdlers in array: ".count( $hurdlers )."<br>";
 	}
 	
 	/* DAY 3
