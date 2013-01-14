@@ -23,22 +23,28 @@
 <head>
 <meta charset="<?php echo esc_attr( get_bloginfo( 'charset' ) ); ?>" />
 <title><?php woo_title(); ?></title>
+
+
 <?php woo_meta(); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_bloginfo( 'stylesheet_url' ) ); ?>" media="all" />
 <link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>" />
 <?php wp_head(); ?>
 <?php woo_head(); ?>
+
 </head>
 <body <?php body_class(); ?>>
 <?php woo_top(); ?>
-<div id="wrapper">        
+<div id="wrapper">
+        
 	<?php woo_header_before(); ?>
     
 	<div id="header" class="col-full">
  		
 		<?php woo_header_inside(); ?>
        
-		<div id="logo">
+		<div id="logo" width="900px">
+				<img border="0" align="right" src="/wp-content/themes/canvas/images/icons/logoHW.png" alt="Logo" width="154" height="118">
+
 		<?php
 			// Website heading/logo and description text.
 			if ( isset( $woo_options['woo_logo'] ) && ( '' != $woo_options['woo_logo'] ) ) {
@@ -51,6 +57,7 @@
 			echo '<' . $heading_tag . ' class="site-title"><a href="' . esc_url( $site_url ) . '">' . $site_title . '</a></' . $heading_tag . '>' . "\n";
 			if ( $site_description ) { echo '<span class="site-description">' . $site_description . '</span>' . "\n"; }
 		?>
+		
 		</div><!-- /#logo -->
 	      
 	    <h3 class="nav-toggle icon"><a href="#navigation"><?php _e( 'Navigation', 'woothemes' ); ?></a></h3>

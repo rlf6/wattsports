@@ -35,7 +35,7 @@ get_header();
 
       
 
-                     <p><a href="?page_id=27"><img src="/wp-content/themes/canvas/images/football_tournament.jpg" title="Register your WattBall Team" alt="Register your WattBall Team" width="209" height="190" /></a><a href="./registerhurdler.html"><img src="/wp-content/themes/canvas/images/hurdles_tournament.bmp" width="209" height="190" title="Register Hurdler" alt="Register Hurdler"  /></a></p>
+                     <p><a href="?page_id=27"><img src="/wp-content/themes/canvas/images/football_tournament.jpg" title="Register your WattBall Team" alt="Register your WattBall Team" width="209" height="190" /></a><a href="?page_id=31"><img src="/wp-content/themes/canvas/images/hurdles_tournament.bmp" width="209" height="190" title="Register Hurdler" alt="Register Hurdler"  /></a></p>
 
   
                     <div class="fix"></div>
