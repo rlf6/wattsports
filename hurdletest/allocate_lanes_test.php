@@ -151,7 +151,7 @@
 	}
 	
 	//==================================MAIN ALGORITHM==================================	
-	$day = 1;
+	$day = 2;
 	$hurdlers = array( ); // an array of hurdler IDs to allocate to lanes
 	
 	// Special handling for days less than three
