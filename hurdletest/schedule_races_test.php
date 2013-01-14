@@ -140,10 +140,16 @@
 	$race_time = date("H:i:s", $race_times[$tier][1] );
 	$race_date = date("Y-m-d", $race_times[$tier][1] );
 	
+	echo "<p> $query = ";
+	
 	$query = "INSERT INTO race(race_name, location_id, time, date, event_event_id, umpire, tier)";
 	$query = $query." VALUES('TEST', $location_id, $race_time, $race_date, $event_id, $umpire_id, $tier)";
 	
 	echo $query."<br>";
+	
+	// INSERT
+	if( !mysql_query( $query ) )
+		die( 'ERROR: ' . mysql_error( ) );
 	
 	mysql_close( );
 ?>
