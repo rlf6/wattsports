@@ -45,14 +45,7 @@
 			// Get next race
 			$race++;
 		}
-		echo "TEST ".$i." **********************<br>";
-		
-		for( $j = 1; $j <= count( $race_array[1] ); $j++ )
-		{
-			echo "Hurdler ID: " . $race_array[1][$j] . "<br>";
-		}
-		
-		echo "<br>";
+
 		// return the array of races and hurdlers
 		return $race_array;
 	}
@@ -179,7 +172,7 @@
 	{
 		echo "RACE ".$i." **********************<br>";
 		
-		for( $j = 1; $j <= count( $race_array[$i] ); $j++ )
+		for( $j = 0; $j <= count( $race_array[$i] ); $j++ )
 		{
 			echo "Hurdler ID: " . $race_array[$i][$j] . "<br>";
 		}
