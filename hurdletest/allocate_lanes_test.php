@@ -149,17 +149,11 @@
 			return;
 		}
 
-		echo "Number of hurdlers: ".$num_rows."<br>";
 		// Could probably just make the query "SELECT id" and use the $result, but I think it's better this way
 		for( $i = 1; $i <= $num_rows; $i++ )
 		{
 			$row = mysql_fetch_array( $result );		
 			$hurdlers[$i] = $row['id'];
-		}
-		echo "Number of Hurdlers in array: ".count( $hurdlers )."<br>";
-		for( $i = 1; $i <= $num_rows; $i++ )
-		{
-			echo "Hurdler: ".$hurdlers[$i]."<br>";
 		}
 	}
 	
