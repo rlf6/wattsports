@@ -14,7 +14,7 @@
 		
 		// Add hurdlers to races in breadth first fashion	
 		$race = 1;
-		for( $i = 1; $i < count( $hurdlers ); $i++ )
+		for( $i = 1; $i <= count( $hurdlers ); $i++ )
 		{		
 			// GET RACE $race
 			$race_copy = $race_array[$race];
