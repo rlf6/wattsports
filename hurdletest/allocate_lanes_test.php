@@ -126,7 +126,7 @@
 	}
 	
 	//==================================MAIN ALGORITHM==================================	
-	$day = 1;
+	$day = 2;
 	$hurdlers = array( ); // an array of hurdler IDs to allocate to lanes
 	
 	// Special handling for days less than three
@@ -170,7 +170,7 @@
 	echo "<br><br><br>";
 	for( $i = 1; $i <= count( $race_array ); $i++ ) // had problems with foreach
 	{
-		echo "RACE**********************<br>";
+		echo "RACE ".$i." **********************<br>";
 		
 		for( $j = 1; $j <= count( $race_array[$i] ); $j++ )
 		{
