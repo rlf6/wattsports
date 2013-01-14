@@ -50,6 +50,23 @@
 		return $race_array;
 	}
 
+	function shuffle_assoc($array)
+	{
+		// Initialize
+		$shuffled_array = array();
+
+		// Get array's keys and shuffle them.
+		$shuffled_keys = array_keys($array);
+		shuffle($shuffled_keys);
+
+		// Create same array, but in shuffled order.
+		foreach ( $shuffled_keys AS $shuffled_key )
+			$shuffled_array[  $shuffled_key  ] = $array[  $shuffled_key  ];
+
+		// Return
+		return $shuffled_array;
+	}
+
 	// IN: An array of hurdlers to allocate to lanes, and "day" (style of allocation: random, non-random, etc.)
 	// OUT: Array of races with hurdlers in *correct* lanes
 	function allocate_lanes( $hurdlers, $day )
@@ -79,11 +96,19 @@
 		// Special cases for days greater than 1
 		if( $day == 2 )
 		{
-			// SHUFFLE LANES
+			// SHUFFLE LANES - NOW WITH THE CORRECT KEYS
 			// we've put all the hurdlers in races, so now we shuffle the lanes within those races
 			// this is much simpler than adding the hurdlers to the array in a random order
 			for( $i = 1; $i <= count( $race_array ); $i++ )
-				shuffle( $race_array[$i] );
+			{
+				$race_copy = array();
+				$shuffled_keys = array_keys( $race_array[$i] );
+				shuffle( $shuffled_keys );
+				
+				// Create same array, but in shuffled order.
+				foreach( $shuffled_keys as $shuffled_key )
+					$shuffled_array[$shuffled_key] = $array[$shuffled_key];
+			}
 		}
 		else if( $day >= 3 )
 		{
