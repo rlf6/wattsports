@@ -96,11 +96,24 @@
 		// Special cases for days greater than 1
 		if( $day == 2 )
 		{
-			// SHUFFLE LANES
+			// SHUFFLE LANES - NOW WITH THE CORRECT KEYS
 			// we've put all the hurdlers in races, so now we shuffle the lanes within those races
 			// this is much simpler than adding the hurdlers to the array in a random order
 			for( $i = 1; $i <= count( $race_array ); $i++ )
-				shuffle( $race_array[$i] );
+			{
+				// Copy the lanes
+				$race_copy = $race_array[$i];
+				
+				// Create an array of the keys and shuffle them
+				$keys = array_keys( $race_array[$i] );
+				shuffle( $keys );
+				
+				// Take the new
+				for( $j = 0; $j <= count( $keys ); $j++ )
+					$race_array[$i][$j+1] = $race_copy[$keys[$j]];
+
+				//shuffle( $race_array[$i] );
+			}
 		}
 		else if( $day >= 3 )
 		{
