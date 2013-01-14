@@ -150,6 +150,8 @@
 	// INSERT
 	if( !mysql_query( $query ) )
 		die( 'ERROR: ' . mysql_error( ) );
+		
+	echo "Race added!";
 	
 	mysql_close( );
 ?>
