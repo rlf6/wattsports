@@ -153,7 +153,7 @@
 		for( $i = 1; $i <= $num_rows; $i++ )
 		{
 			$row = mysql_fetch_array( $result );		
-			$hurdlers[$i] = $row['id'];
+			$hurdlers[''.$i.''] = $row['id'];
 		}
 	}
 	
