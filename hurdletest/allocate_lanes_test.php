@@ -109,7 +109,7 @@
 				shuffle( $keys );
 				
 				// Take the new
-				for( $j = 0; $j <= count( $keys ); $j++ )
+				for( $j = 0; $j < count( $keys ); $j++ )
 					$race_array[$i][$j+1] = $race_copy[$keys[$j]];
 
 				//shuffle( $race_array[$i] );
