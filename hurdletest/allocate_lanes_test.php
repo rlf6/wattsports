@@ -25,7 +25,7 @@
 				if( !isset( $race_copy[$j] ) ) // is this lane available?
 				{
 					echo "Added hurdler '" . $hurdlers[$i] . "' to lane " . $j . " of race " . $race . "<br>";
-					$race_array[$race][$j] = $hurdlers[$i]; // $race does not exist outside of this loop, stupid. $race_array does.
+					$race_array[$race][$j] = $hurdlers[$i]; // $race_copy does not exist outside of this loop, stupid. $race_array does.
 					break;
 				}
 			}
@@ -45,7 +45,14 @@
 			// Get next race
 			$race++;
 		}
+		echo "TEST ".$i." **********************<br>";
 		
+		for( $j = 1; $j <= count( $race_array[1] ); $j++ )
+		{
+			echo "Hurdler ID: " . $race_array[1][$j] . "<br>";
+		}
+		
+		echo "<br>";
 		// return the array of races and hurdlers
 		return $race_array;
 	}
