@@ -101,14 +101,14 @@
 			// this is much simpler than adding the hurdlers to the array in a random order
 			for( $i = 1; $i <= count( $race_array ); $i++ )
 			{
-				/*$race_copy = array();
-				$shuffled_keys = array_keys( $race_array[$i] );
-				shuffle( $shuffled_keys );
+				$race_copy = $race_array[$i];
+				$keys = array_keys( $race_array[$i] );
+				shuffle( $keys );
 				
 				// Create same array, but in shuffled order.
-				foreach( $shuffled_keys as $shuffled_key )
-					$shuffled_array[$shuffled_key] = $race_array[$shuffled_key];*/
-				shuffle( $race_array[$i] );
+				foreach( $keys as $key )
+					$race_array[$i][$key] = $race_copy[$key];
+				//shuffle( $race_array[$i] );
 			}
 		}
 		else if( $day >= 3 )
