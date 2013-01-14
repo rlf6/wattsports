@@ -197,15 +197,13 @@
 	$race_array = allocate_lanes( $hurdlers, $day );
 	
 	// PRINT OUTPUT
-	echo "<br><br><br>";
+	echo "<p>";
 	for( $i = 1; $i <= count( $race_array ); $i++ ) // had problems with foreach
 	{
 		echo "RACE ".$i." **********************<br>";
 		
 		for( $j = 1; $j <= count( $race_array[$i] ); $j++ )
-		{
 			echo "Lane ".$j." : Hurdler ID " . $race_array[$i][$j] . "<br>";
-		}
 		
 		echo "<br>";
 	}
