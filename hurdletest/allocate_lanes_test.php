@@ -108,7 +108,7 @@
 				$keys = array_keys( $race_array[$i] );
 				shuffle( $keys );
 				
-				// Take the new
+				// Take the values and add them to the array in the new order
 				for( $j = 0; $j < count( $keys ); $j++ )
 					$race_array[$i][$j+1] = $race_copy[$keys[$j]];
 
@@ -204,7 +204,7 @@
 		
 		for( $j = 1; $j <= count( $race_array[$i] ); $j++ )
 		{
-			echo "Hurdler ID: " . $race_array[$i][$j] . "<br>";
+			echo "Lane ".$j." : Hurdler ID " . $race_array[$i][$j] . "<br>";
 		}
 		
 		echo "<br>";
