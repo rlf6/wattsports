@@ -140,7 +140,7 @@
 	$race_time = date("F j Y", $race_times[$tier][1] );
 	$race_date = ddate("g:i a", $race_times[$tier][1] );
 	
-	$query = "INSERT INTO race(race_name, location_id, time, date, event_event_id, umpire, tier)"
+	$query = "INSERT INTO race(race_name, location_id, time, date, event_event_id, umpire, tier)";
 	$query = $query." VALUES('TEST', $location_id, $race_time, $race_date, $event_id, $umpire_id, $tier)";
 	
 	echo $query."<br>";
