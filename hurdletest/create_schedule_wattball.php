@@ -63,8 +63,8 @@ $x=($round-1)*($m/2)
 
 for($p; $p < ($m/2)
 {
-	games[$x][0]=part1[$p];
-	games[$x][1]=part2[$p];
+	$games[$x][0]=$part1[$p];
+	$games[$x][1]=$part2[$p];
 	$x++;
 }
 $round++
@@ -93,8 +93,8 @@ for($round; $round <= $rounds; $round++)
 	{ $p = 1;}
 	for($p; $p < ($m/2)
 	{
-		games[$x][0]=part1[$p];
-		games[$x][1]=part2[$p];
+		$games[$x][0]=$part1[$p];
+		$games[$x][1]=$part2[$p];
 		$x++;
 	}
 	$round++;
@@ -197,8 +197,8 @@ for ($x = 1; $x < $num_teams; $x++)
 $newDay = true;
 $newAfternoon = false;
 $match_date = $date_start_php;
-
-for($i=0; $i< $slots; $i++)
+$i=0;
+while($i< $slots)
 {
 	//set start and end times
 	while($found == false)//loop until valid times found
@@ -246,6 +246,30 @@ for($i=0; $i< $slots; $i++)
 			$found = true; //exit while loop
 		}
 	}
+	//we may use these start/end times for as many matches as there are pitches
+	for($x=1; $x <= $pitches; $x++)
+	{
+		//vvv-----will require re-think-----vvvvvv
+		$location = "pitch".$x //this requires a naming convention of pitchX pitchY ...etc
+		$team1 = $game[$i][0];
+		$team2 = $game[$i][1];
+		//=========referee needed!
+		if ($played[$team1]==false && $played[$team2]==false)
+		{
+			$sql = "INSERT INTO match (location_id, kick_off, date, team_A, team_B)
+			VALUES
+			('$location', '$match_Start', '$match_date', '$team1', '$team2')";
+			if (!mysql_query($sql))
+			{
+				die('Error: '. mysql_error());
+			}
+			//
+			echo "match: ".$team1 ." vs ". $team2 ." added.";
+		}
+	}
+	$i += $pitches;
+}
+	
 }
 
 ?>
