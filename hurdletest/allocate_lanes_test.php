@@ -126,7 +126,7 @@
 	}
 	
 	//==================================MAIN ALGORITHM==================================	
-	$day = 2;
+	$day = 1;
 	$hurdlers = array( ); // an array of hurdler IDs to allocate to lanes
 	
 	// Special handling for days less than three
@@ -153,7 +153,7 @@
 		for( $i = 1; $i <= $num_rows; $i++ )
 		{
 			$row = mysql_fetch_array( $result );		
-			$hurdlers[''.$i.''] = $row['id'];
+			$hurdlers[$i] = $row['id'];
 		}
 	}
 	
@@ -172,7 +172,7 @@
 	{
 		echo "RACE ".$i." **********************<br>";
 		
-		for( $j = 0; $j <= count( $race_array[$i] ); $j++ )
+		for( $j = 1; $j <= count( $race_array[$i] ); $j++ )
 		{
 			echo "Hurdler ID: " . $race_array[$i][$j] . "<br>";
 		}
