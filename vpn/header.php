@@ -29,11 +29,14 @@ $username = $_SESSION['username'];
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script src='http://www.wattsports.co.uk/wp-content/themes/canvas/includes/js/general.js'></script>
 		
-		<script type="text/javascript" src="../noty/js/noty/jquery.noty.js"></script>
+		<script type="text/javascript" src="/noty/js/noty/jquery.noty.js"></script>
 
-		<script type="text/javascript" src="../noty/js/noty/layouts/topRight.js"></script>
+		<script type="text/javascript" src="/noty/js/noty/layouts/top.js"></script>
+		<script type="text/javascript" src="/noty/js/noty/layouts/topCenter.js"></script>
+		<script type="text/javascript" src="/noty/js/noty/layouts/topLeft.js"></script>
+		<script type="text/javascript" src="/noty/js/noty/layouts/topRight.js"></script>
 
-		<script type="text/javascript" src="../noty/js/noty/themes/default.js"></script>
+		<script type="text/javascript" src="/noty/js/noty/themes/default.js"></script>
 		<script type="text/javascript">
 		
 		
