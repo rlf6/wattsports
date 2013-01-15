@@ -143,37 +143,10 @@ else
 {	$exclude=false;	}
 
 $daysArray = getNumberOfDays($date_start_php, $date_end_php, $exclude);
-/* back-up incase we do not have new enough version of php to run above function
-$days = floor(abs($date_end_php - $date_start_php) / 86400); //floor gives num full days
 
-	//for an even number of teams, start at the first pair
-	if (($num_teams % 2) == 0)
-	{
-		$p = 0;
-	}
-	else
-	//for an odd number of teams, ignore the first pair
-	{
-		$p = 1;
-	}
-	for($p; $p < ($m/2)
-	{
-		games[$x][0]=part1[$i];
-		games[$x][1]=part2[$i];
-		$x++;
-	}
-	$round++
 	
-}
 //===========calculate available slots============
-//calculate days
-=======
-if (!($_POST['weekends']))
-{
-	$exclude=true;
-}
-else
-{	$exclude=false;	}*/
+
 //==============Matches per day
 //number of hours in a match day
 $hour= $_POST['begin_h'];
