@@ -15,20 +15,13 @@ include('./header.php');
 
 <div class="center_div" border="2px solid">
 				
-				
 			<div class="scroll">
-
-	
-			<p> 
-			Latest News: <br />
-			Minimum Required Teams for tournament = 16 now instead of 20<br />
-			Tickets Report now Daily instead of Weekly<br />
-			Software Update Due: 25/06/2012<br />
-			<br />
-			Needing Attention:<br />
-			Issues to be dealt with see Tabs to the right.<br />
-			</p>
-			<a href="http://www.wattsports.co.uk" />Wattsports</a>
+				
+				<a href="./hurdletest/schedule_hurdles.php">Schedule Hurdling Tournament</a>	<a href="./hurdletest/schedule_wattball.php">Schedule Wattball Tournament</a>	
+			<?
+			// include('/hurdletest/schedule_hurdles.php');
+			
+			?>
 			
  			</div>
 			

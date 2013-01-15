@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Scheduler
+ * Template Name: Schedule
  *
  * This template displays content from the "Widgets Page Template" registered sidebar.
  * If no widgets are present in this registered sidebar, the default page content is displayed instead.
@@ -34,14 +34,15 @@ get_header();
 			<th>Firstname</th>
 			<th>Lastname</th>
 			<th>Previous Best</th>
-			</tr>";
+			</tr>" ;
 
 			while($row = mysql_fetch_array($query))
 			  {
 			  echo "<tr>";
 			  echo "<td>" . $row['name'] . "</td>";
 			  echo "<td>" . $row['surname'] . "</td>";
-			  echo "<td>" . $row['previous_best'] . "</td>";
+			  echo "<td>" . $row['postition'] . "</td>";
+			  echo "<td>" . $row['dob'] . "</td>";
 			  echo "</tr>";
 			  }
 			echo "</table>";

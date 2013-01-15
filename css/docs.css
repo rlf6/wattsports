@@ -8,7 +8,7 @@
 
 /* Body and structure
 -------------------------------------------------- */
-body {
+body.grey {
   position: relative;
   padding-top: 90px;
   background-color: #EEEEEE;
@@ -17,6 +17,18 @@ body {
 
 /* Tweak navbar brand link to be super sleek
 -------------------------------------------------- */
+table.center
+{
+float:center;
+}
+td.center
+{
+float:center;
+}
+a.center
+{
+float:center;
+}
 div.scroll
 {
  margin-left:auto;
@@ -25,23 +37,34 @@ position:static;
 width:500px;
 height:250px;
 overflow:scroll;
+padding:5px;
+background-color:white;
+border: 2px solid;
+}
+
+div.scroll_h
+{
+ margin-left:auto;
+ margin-right:auto;
+position:static;
+width:802px;
+height:250px;
+overflow:scroll;
+padding:5px;
 background-color:white;
 border: 2px solid;
 }
 div.center_div
 {
-
+z-index:-5;
 padding:50px;
 }
 
-ul.tabs
+input.table
 {
-position:absolute;
-top:250px;
-right:175px;
-padding:5px;
- 
+size:3;
 }
+
 img.logo
 {
   position:absolute;
@@ -577,6 +600,7 @@ form.well {
 .docs-input-sizes input[type=text] {
   display: block;
   margin-bottom: 9px;
+  size:3;
 }
 
 /* Icons

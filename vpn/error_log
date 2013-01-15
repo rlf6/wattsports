@@ -794,3 +794,426 @@
 [11-Jan-2013 21:24:17 UTC] PHP Notice:  Undefined variable: mobile in /home/wattspor/public_html/vpn/scheduler.php on line 12
 [11-Jan-2013 21:24:19 UTC] PHP Notice:  Undefined variable: mobile in /home/wattspor/public_html/vpn/scheduler.php on line 12
 [11-Jan-2013 21:26:29 UTC] PHP Notice:  Undefined variable: mobile in /home/wattspor/public_html/vpn/scheduler.php on line 12
+[11-Jan-2013 22:30:16 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[11-Jan-2013 22:30:16 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[11-Jan-2013 22:30:19 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[11-Jan-2013 22:30:19 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[11-Jan-2013 22:30:22 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[11-Jan-2013 22:30:22 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[11-Jan-2013 22:30:28 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[11-Jan-2013 22:30:28 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[11-Jan-2013 22:30:45 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[11-Jan-2013 22:30:45 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[11-Jan-2013 22:30:51 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[11-Jan-2013 22:30:51 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 00:38:56 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 00:38:56 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 00:38:59 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 00:38:59 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 12:05:15 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 12:05:15 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 12:09:38 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 12:09:38 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 12:09:42 UTC] PHP Warning:  include(dbfunctions.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/logout.php on line 4
+[12-Jan-2013 12:09:42 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'dbfunctions.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/logout.php on line 4
+[12-Jan-2013 12:09:42 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/logout.php:4) in /home/wattspor/public_html/vpn/logout.php on line 5
+[12-Jan-2013 12:14:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/wattspor/public_html/vpn/logout.php:13) in /home/wattspor/public_html/vpn/logout.php on line 27
+[12-Jan-2013 12:14:31 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 35
+[12-Jan-2013 12:14:31 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 36
+[12-Jan-2013 12:14:43 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/wattspor/public_html/vpn/index.php:23) in /home/wattspor/public_html/vpn/index.php on line 32
+[12-Jan-2013 12:14:43 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/index.php:23) in /home/wattspor/public_html/vpn/index.php on line 32
+[12-Jan-2013 12:14:43 UTC] PHP Warning:  session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent in /home/wattspor/public_html/vpn/index.php on line 33
+[12-Jan-2013 12:14:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/wattspor/public_html/vpn/index.php:23) in /home/wattspor/public_html/vpn/index.php on line 43
+[12-Jan-2013 12:14:51 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 12:14:51 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 12:14:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/wattspor/public_html/vpn/logout.php:13) in /home/wattspor/public_html/vpn/logout.php on line 27
+[12-Jan-2013 12:14:55 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 35
+[12-Jan-2013 12:14:55 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 36
+[12-Jan-2013 12:15:06 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/wattspor/public_html/vpn/index.php:23) in /home/wattspor/public_html/vpn/index.php on line 32
+[12-Jan-2013 12:15:06 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/index.php:23) in /home/wattspor/public_html/vpn/index.php on line 32
+[12-Jan-2013 12:15:06 UTC] PHP Warning:  session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent in /home/wattspor/public_html/vpn/index.php on line 33
+[12-Jan-2013 12:15:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/wattspor/public_html/vpn/index.php:23) in /home/wattspor/public_html/vpn/index.php on line 43
+[12-Jan-2013 12:16:34 UTC] PHP Notice:  Undefined variable: num in /home/wattspor/public_html/vpn/index.php on line 64
+[12-Jan-2013 12:33:00 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 12:33:00 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 12:33:10 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 12:33:10 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 13:54:02 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 13:54:02 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 13:54:05 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 13:54:05 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 13:55:27 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 13:55:27 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 13:59:37 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 13:59:37 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 13:59:38 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/wattspor/public_html/vpn/competitors.php on line 23
+[12-Jan-2013 13:59:38 UTC] PHP Notice:  Undefined variable: results in /home/wattspor/public_html/vpn/competitors.php on line 24
+[12-Jan-2013 13:59:57 UTC] PHP Notice:  Undefined variable: results in /home/wattspor/public_html/vpn/competitors.php on line 24
+[12-Jan-2013 14:07:25 UTC] PHP Parse error:  syntax error, unexpected $end, expecting T_VARIABLE or T_DOLLAR_OPEN_CURLY_BRACES or T_CURLY_OPEN in /home/wattspor/public_html/vpn/competitors.php on line 45
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:07:34 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: 0 not found in MySQL result index 2 in /home/wattspor/public_html/vpn/competitors.php on line 28
+[12-Jan-2013 14:11:16 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 14:11:16 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 14:11:18 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 14:11:18 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 14:24:48 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 14:24:48 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 14:24:52 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 14:24:52 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 14:25:16 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 14:25:16 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 14:25:17 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 14:25:17 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 14:25:18 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 14:25:18 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 14:25:32 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 14:25:32 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 14:25:34 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 14:25:34 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 14:27:29 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 14:27:29 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 14:27:30 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 14:27:30 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 14:27:34 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 14:27:34 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 14:49:57 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/competitors.php:20) in /home/wattspor/public_html/vpn/header.php on line 5
+[12-Jan-2013 14:53:46 UTC] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/wattspor/public_html/vpn/competitors.php on line 46
+[12-Jan-2013 15:22:29 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[12-Jan-2013 15:22:29 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[12-Jan-2013 21:17:11 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[12-Jan-2013 21:17:11 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[12-Jan-2013 21:17:47 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[12-Jan-2013 21:17:47 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[13-Jan-2013 19:15:00 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[13-Jan-2013 19:15:00 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[13-Jan-2013 20:26:30 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[13-Jan-2013 20:26:30 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:07:21 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:07:21 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:07:22 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:07:22 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:10:34 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 01:10:34 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 01:24:53 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 01:24:53 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 01:31:50 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 01:31:50 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 01:32:38 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 01:32:38 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 01:32:40 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:32:40 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:32:40 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:32:40 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:32:42 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:32:42 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:32:42 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:32:42 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:34:12 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:34:12 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:34:12 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:34:12 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:34:14 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:34:14 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:34:14 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:34:14 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:34:15 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:34:15 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:34:15 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:34:15 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:34:15 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:34:15 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:34:15 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:34:15 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:34:24 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:34:24 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 01:34:24 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/index.php on line 34
+[14-Jan-2013 01:34:24 UTC] PHP Notice:  Undefined index: md5str in /home/wattspor/public_html/vpn/index.php on line 35
+[14-Jan-2013 11:22:50 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 11:22:50 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 12:09:32 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 12:09:32 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 12:10:24 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 12:10:24 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 12:10:24 UTC] PHP Warning:  include(/hurdletest/schedulehurdle.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 12:10:24 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/hurdletest/schedulehurdle.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 12:11:06 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 12:11:06 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 12:11:06 UTC] PHP Warning:  include(/hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 12:11:06 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 12:11:24 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 12:11:24 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 12:11:24 UTC] PHP Warning:  include(../hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 12:11:24 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 15:16:27 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 15:16:27 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 15:16:27 UTC] PHP Warning:  include(../hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 15:16:27 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 15:16:40 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 15:16:40 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 15:16:40 UTC] PHP Warning:  include(../hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 15:16:40 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 15:16:42 UTC] PHP Notice:  Undefined variable: _SESSION in /home/wattspor/public_html/vpn/header.php on line 13
+[14-Jan-2013 17:04:44 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 17:04:44 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 17:04:44 UTC] PHP Warning:  include(../hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 17:04:44 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 18:04:02 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 18:04:02 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 18:04:02 UTC] PHP Warning:  include(/hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 18:04:02 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:25:28 UTC] PHP Notice:  Undefined variable: r8 in /home/wattspor/public_html/vpn/competitors.php on line 43
+[14-Jan-2013 18:34:34 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 18:34:34 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 18:34:34 UTC] PHP Warning:  include(/hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 18:34:34 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 18:37:29 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 18:37:29 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 18:37:29 UTC] PHP Warning:  include(/hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 18:37:29 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 18:55:38 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 90
+[14-Jan-2013 18:55:38 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 91
+[14-Jan-2013 18:55:38 UTC] PHP Warning:  include(/hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 18:55:38 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 20:59:28 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 59
+[14-Jan-2013 20:59:28 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 60
+[14-Jan-2013 20:59:28 UTC] PHP Warning:  include(/hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 20:59:28 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[14-Jan-2013 21:43:47 UTC] PHP Notice:  Use of undefined constant value - assumed 'value' in /home/wattspor/public_html/vpn/competitors.php on line 77
+[14-Jan-2013 22:05:40 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/wattspor/public_html/vpn/mysql.php on line 8
+[14-Jan-2013 22:06:29 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/wattspor/public_html/vpn/mysql.php on line 8
+[14-Jan-2013 22:06:33 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/wattspor/public_html/vpn/mysql.php on line 8
+[14-Jan-2013 22:12:04 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/wattspor/public_html/vpn/mysql.php on line 8
+[14-Jan-2013 22:24:43 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/wattspor/public_html/vpn/mysql.php on line 8
+[14-Jan-2013 22:24:46 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/wattspor/public_html/vpn/mysql.php on line 8
+[14-Jan-2013 22:24:50 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/wattspor/public_html/vpn/mysql.php on line 8
+[14-Jan-2013 22:24:55 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/wattspor/public_html/vpn/mysql.php on line 8
+[14-Jan-2013 22:34:37 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/wattspor/public_html/vpn/mysql.php on line 10
+[14-Jan-2013 22:34:43 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/wattspor/public_html/vpn/mysql.php on line 10
+[14-Jan-2013 22:40:32 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/wattspor/public_html/vpn/mysql.php on line 10
+[15-Jan-2013 01:23:50 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 01:23:50 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 01:23:50 UTC] PHP Warning:  include(/hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[15-Jan-2013 01:23:50 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[15-Jan-2013 01:25:03 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 01:25:03 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 01:25:03 UTC] PHP Warning:  include(/hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[15-Jan-2013 01:25:03 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[15-Jan-2013 10:45:50 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 10:45:50 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 10:45:50 UTC] PHP Warning:  include(/hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[15-Jan-2013 10:45:50 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[15-Jan-2013 10:45:54 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 10:45:54 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 10:45:54 UTC] PHP Warning:  include(/hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[15-Jan-2013 10:45:54 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[15-Jan-2013 10:52:29 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 10:52:29 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 10:52:29 UTC] PHP Warning:  include(/hurdletest/schedule_hurdles.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[15-Jan-2013 10:52:29 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/hurdletest/schedule_hurdles.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/scheduler.php on line 22
+[15-Jan-2013 10:59:41 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 10:59:41 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 11:00:22 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 11:00:22 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 11:00:28 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 11:00:28 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 11:01:42 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 11:01:42 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 11:03:19 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 11:03:19 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 11:03:36 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 11:03:36 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 11:03:41 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 11:03:41 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 11:04:14 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 11:04:14 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 11:04:23 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 11:04:23 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 11:05:04 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 11:05:04 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 11:05:09 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 11:05:09 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 12:50:08 UTC] PHP Notice:  Undefined variable: _SESSION in /home/wattspor/public_html/vpn/header.php on line 13
+[15-Jan-2013 12:50:23 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 12:50:23 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 12:52:02 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 12:52:02 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 12:54:38 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 12:54:38 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 12:54:43 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/header.php on line 13
+[15-Jan-2013 13:08:02 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 13:08:02 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 13:08:20 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 13:08:20 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 13:08:25 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 13:08:25 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 13:09:24 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 13:09:24 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 13:10:10 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 13:10:10 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 13:10:14 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 13:10:14 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 13:10:31 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 13:10:31 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 13:10:37 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 80
+[15-Jan-2013 13:10:37 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 81
+[15-Jan-2013 13:14:14 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[15-Jan-2013 13:14:14 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[15-Jan-2013 13:14:24 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[15-Jan-2013 13:14:24 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[15-Jan-2013 13:18:01 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[15-Jan-2013 13:18:01 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[15-Jan-2013 13:18:20 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[15-Jan-2013 13:18:20 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[15-Jan-2013 13:21:44 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[15-Jan-2013 13:21:44 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[15-Jan-2013 13:21:49 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[15-Jan-2013 13:21:49 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85
+[15-Jan-2013 13:25:31 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 84
+[15-Jan-2013 13:25:31 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 85

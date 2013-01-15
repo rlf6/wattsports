@@ -94,6 +94,7 @@ input::-moz-focus-inner {
   border: 0;
 }
 
+
 button,
 input[type="button"],
 input[type="reset"],
@@ -775,7 +776,7 @@ label {
   color: #333333;
 }
 
-input,
+
 textarea,
 select,
 .uneditable-input {
@@ -786,6 +787,18 @@ select,
   margin-bottom: 9px;
   font-size: 13px;
   line-height: 18px;
+  color: #555555;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+input
+.uneditable-input {
+  display: inline-block;
+
+
   color: #555555;
   background-color: #ffffff;
   border: 1px solid #cccccc;

@@ -8,6 +8,8 @@ $active1 ='active';
 $active2 ='';
 $active3 ='';
 $active4 ='';
+$active5 ='';
+$active6 ='';
  $Title = "Wattsports";
 $mobile ='';
 include('./header.php');
@@ -33,7 +35,11 @@ include('./header.php');
  			</div>
 			
 			
-			
+			<table class="success" >
+			<tr><td>Hi</td></tr>
+			<tr><td>Hi</td></tr>
+			</table>
+			</div>
 						
 </div>
 
