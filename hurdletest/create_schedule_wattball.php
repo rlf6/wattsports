@@ -143,15 +143,8 @@ else
 {	$exclude=false;	}
 
 $daysArray = getNumberOfDays($date_start_php, $date_end_php, $exclude);
-/* back-up incase we do not have new enough version of php to run above function
-$days = floor(abs($date_end_php - $date_start_php) / 86400); //floor gives num full days
 
-if (!($_POST['weekends']))
-{
-	$exclude=true;
-}
-else
-{	$exclude=false;	}*/
+
 //==============Matches per day
 //number of hours in a match day
 $hour= $_POST['begin_h'];
