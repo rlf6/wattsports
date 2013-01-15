@@ -69,8 +69,9 @@
 			echo $query;
 
 			while( list($event_id, $event_name) = mysql_fetch_row($result) )
-			{.
-				echo '<input type="checkbox" value="'.$location_id.'" checked=true>'.$location_name.'</input><br';
+			{
+				echo "location: ".$row['location'];
+				echo '<input type="checkbox" value="'.$row['location_id'].'" checked=true>'.$row['location_name'].'</input><br />';
 			}
 		?>
 		</fieldset>
