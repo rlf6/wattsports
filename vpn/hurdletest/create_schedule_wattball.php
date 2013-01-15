@@ -167,6 +167,7 @@ $matchtime = $duration + $gap; //time needed per match (in minutes)
 $pitches = 4;//test value
 /*
 ============here need to figure out how many pitches were selected on previous page
+
 */
 //how many matches may be played per day?
 $matches = (($time/2)/$matchtime)*$pitches*2;
@@ -248,8 +249,13 @@ for($i=0; $i< $slots; $i++)
 	{
 		//vvv-----will require re-think-----vvvvvv
 		$location = "pitch".$x //this requires a naming convention of pitchX pitchY ...etc
+		echo 'date'.$match_date;
+		echo 'start time'.$match_start;
+		echo 'location'.$location;
 		$team1 = $game[$i][0];
+		echo 'teamA'.$team1;
 		$team2 = $game[$i][1];
+		echo 'teamA'.$team2;
 		//=========referee needed!
 		if ($played[$team1]==false && $played[$team2]==false)
 		{
@@ -269,3 +275,4 @@ for($i=0; $i< $slots; $i++)
 }
 
 ?>
+
