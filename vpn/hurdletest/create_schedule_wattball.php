@@ -61,7 +61,7 @@ for($i=0; $i < $m/2; $i++)
 }
 $x=($round-1)*($m/2)
 
-for($p; $p < ($m/2)
+for($p; $p < ($m/2); $p++)
 {
 	games[$x][0]=part1[$p];
 	games[$x][1]=part2[$p];
