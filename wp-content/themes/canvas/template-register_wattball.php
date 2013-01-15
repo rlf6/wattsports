@@ -48,21 +48,23 @@ get_header();
 					$no  = 0;
 					echo "<h4> Please fill in your team members details below. </h4> <br /> 
 					<div class='scroll'>
-					<form method='POST' action='?page_id=27' >
+					<form method='POST' action='/register/register-wattball-team/' >
 					<table >";
 					while($no < $_POST['no_mem'])
 					{
 						if($no%2==0)echo "<tr>";
 						echo "<td class='padding'>";
 							echo '<h5> Your '.$str[$no].' Players Details </h5>
-							<p> Name <input name="name'.$no.'" type="text" /> </p>
-							<p> Surname <input name="surname'.$no.'" type="text" /></p>
-							<p> Email Address <input name="email'.$no.'" type="text" /></p> 
-							<p> Address <input name="address'.$no.'" type="text" /></p>
-							<p> Phone Number <input name="phone'.$no.'" type="text" /></p>
-							<p> Date of Birth <input name="dob'.$no.'" type="text" /></p>
-							<p> Position <input name="position'.$no.'" type="text" /></p>
-							<p> Shirt Number <input name="shirt'.$no.'" type="text" /></p>
+							<table>
+							<tr> <td><p> Name </td><td><input name="name'.$no.'" type="text" /> </p><td> </tr>
+							<tr> <td><p> Surname </td><td><input name="surname'.$no.'" type="text" /></p><td> </tr>
+							<tr> <td><p> Email Address </td><td><input name="email'.$no.'" type="text" /></p> <td> </tr>
+							<tr> <td><p> Address </td><td><input name="address'.$no.'" type="text" /></p><td> </tr>
+							<tr> <td><p> Phone Number </td><td><input name="phone'.$no.'" type="text" /></p><td> </tr>
+							<tr> <td><p> Date of Birth </td><td><input name="dob'.$no.'" type="text" /></p><td> </tr>
+							<tr> <td><p> Position </td><td><select name="position'.$no.'" > <option value="GoalKeeper">GoalKeeper</option><option value="Defender">Defender</option><option value="Midfielder">Midfielder</option><option value="Forward">Forward</option></select>
+							<tr> <td><p> Shirt Number </td><td><input name="shirt'.$no.'" type="text" /></p><td> </tr>
+							</table>
 							<hr /></td>';
 							if($no%2)echo "</tr>";
 							$no++;
@@ -77,10 +79,13 @@ get_header();
 					echo"</select></td></tr>";
 					echo "</table>
 					<input type='hidden'name='team_name' value='".$_POST['team_name']."' />
+					<input type='hidden'name='mgr_name' value='".$_POST['mgr_name']."' />
+					<input type='hidden'name='mgr_surname' value='".$_POST['mgr_surname']."' />
 					<input type='hidden'name='no_mem' value='".$_POST['no_mem']."' />
 					<input type='hidden'name='assoc' value='".$_POST['associd']."' />
 					<input type='hidden'name='address' value='".$_POST['address']."' />
 					<input type='hidden'name='email' value='".$_POST['email']."' />
+					<input type='hidden'name='badge' value='".$_POST['badge']."' />
 					<input type='submit' title='Submit' />
 					</form></div>";
 				}
@@ -89,13 +94,15 @@ get_header();
 					$no = 0;
 					$no_mem = $_POST['no_mem'];
 
+					$mgr_name = $_POST['mgr_name'];
+					$mgr_surname = $_POST['mgr_surname'];
 					 $team_name = $_POST['team_name'];
 					 $no_mem = $_POST['no_mem'];
 					 $assoc = $_POST['assoc'];
 					 $addre = $_POST['address'];
 					 $email = $_POST['email'];
 					 $captain = $_POST['captain'];
-
+					 $badge = $_POST['badge'];
 					while( $no < $no_mem){
 						
 						${'mem'.$no} = array( $_POST['name'.$no],$_POST['surname'.$no],$_POST['address'.$no],$_POST['dob'.$no],$_POST['phone'.$no],$_POST['email'.$no],$_POST['position'.$no],$_POST['shirt'.$no]);
@@ -118,7 +125,7 @@ get_header();
 					$values = mysql_fetch_array($results);
 					 //echo $values['member_id'];
 					 
-					 $qu = "INSERT INTO `wattball_team` VALUES('$assoc','$team_name','$email','$addre','$values[member_id]')";
+					 $qu = "INSERT INTO `wattball_team` VALUES('$assoc','$team_name','$mgr_name',$mgr_surname,'$email','$addre','$values[member_id]','$badge')";
 					echo "Inserted the following values '$assoc','$team_name','$email','$addre','$values[member_id]'<br />";
 					mysql_query($qu);
 					echo "<script> alert('You have Successfully Registered your Team Thank you.'); </script>";
@@ -134,13 +141,16 @@ get_header();
 					<div>
 						<br />
 						<table>
-						<form  method="POST" action="?page_id=27">
+						<form  method="POST" action="/register/register-wattball-team/">
 						
 						<tr><p><td> Team Name </td><td><input name="team_name" type="text" /></td></p></tr>
+						<tr><p><td> Managers Name </td><td><input name="mgr_name" type="text" /></td></p></tr>
+						<tr><p><td> Managers Surname </td><td><input name="mgr_surname" type="text" /></td></p></tr>
 						<tr><p><td> WattBall Association ID </td><td><input name="associd" type="text" /></td></p></tr>
 						<tr><p><td> Email Address </td><td><input name="email" type="text" /></td></p> </tr>
 						<tr><p><td> Address </td><td><input name="address" type="text" /></td></p></tr>
 						<tr><p><td> Number of Members </td><td><select name="no_mem" > <option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option> </select></td></p></tr>
+						<tr><p><td> Badge URL </td><td><input name="badge" type="text" /></td></p></tr>
 						<tr><td><input type="submit" title="submit" /></td></tr>
 						</form>
 						</table>

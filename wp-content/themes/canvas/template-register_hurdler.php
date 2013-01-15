@@ -40,8 +40,9 @@ get_header();
 
 			<?
 				if(!empty($_POST) && !empty($_POST['hurdler_name'] )){
-					
-					$qu = "INSERT INTO `hurdler` VALUES('','$_POST[hurdler_name]','$_POST[hurdler_surname]','$_POST[hurdler_address]','$_POST[hurdler_phone]','$_POST[hurdler_email]','$_POST[hurdler_dob]','$_POST[hurdler_sex]','$_POST[hurdler_previous_best]')";
+					$previous_best = $_POST['mins'] + $_POST['secs'] + $_POST['milli'];
+					echo $previous_best;
+					$qu = "INSERT INTO `hurdler` VALUES('','$_POST[hurdler_name]','$_POST[hurdler_surname]','$_POST[hurdler_address]','$_POST[hurdler_phone]','$_POST[hurdler_email]','$_POST[hurdler_dob]','$_POST[hurdler_sex]','$previous_best')";
 					
 					mysql_query($qu);
 					echo "<script> alert('You have Successfully Registered. Thank you.'); </script>";
@@ -79,7 +80,7 @@ get_header();
 					<div>
 						<br />
 						<table>
-						        <form  method="POST" onsubmit="return validateForm(this);" action="?page_id=31" >
+						        <form  method="POST" onsubmit="return validateForm(this);" action="/register/register-hurdler/" >
 								<tr><td> First Name</td><td><input name="hurdler_name" type="text" /></td><tr/>
 								<tr><td> Surname </td><td><input name="hurdler_surname" type="text" /></td><tr/>
 								<tr><td> Address </td><td><input name="hurdler_address" type="text" /></td><tr/>
@@ -90,15 +91,22 @@ get_header();
 								<tr><td>Sex </td><td><input name="hurdler_sex" type="radio" value="m" checked />Male</td><tr/>
 								<tr><td></td><td><input name="hurdler_sex" type="radio" value="f" />Female</td><tr/>
 
-								<tr><td>Previous Best </td><td><input name="hurdler_previous_best" type="text" /></td><tr/>
+								<tr><td>Previous Best </td><td>
+								
+								<select name=mins>'; for($x=0;$x < 20;$x++){echo"<option value =' "; echo $x*60; echo"'>$x</option>";} echo '</select>Minutes <select name=secs>'; for($x=0;$x < 60;$x++){echo"<option value =$x>$x</option>";} echo'</select>Seconds <select name=milli>'; for($x=0;$x < 1000;$x+=100){echo"<option value =0.$x>$x</option>";} echo'</select>Milliseconds 
+								
+								</td><tr/>
 								<tr><td><input type="submit" title="submit" /></td><tr/>
 							</form>
 						</table>
 					</div>';  
 					}
 					?>
-  
+				 
+						 
+						 
                     <div class="fix"></div>
+					
 				<?php woo_post_inside_after(); ?>
 
             </div><!-- /#contact-page -->
