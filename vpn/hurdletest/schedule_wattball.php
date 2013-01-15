@@ -67,7 +67,7 @@
 			$query = "SELECT location_id, location_name FROM location WHERE type='pitch' ORDER BY location_id ASC";
 			$result = mysql_query($query);
 
-			while( list($event_id, $event_name) = mysql_fetch_row($result) )
+			while($row = mysql_fetch_assoc($result) )
 			{
 				echo "location: ".$row['location'];
 				echo '<input type="checkbox" value="'.$row['location_id'].'" checked=true>'.$row['location_name'].'</input><br />';
