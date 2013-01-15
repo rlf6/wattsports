@@ -68,6 +68,7 @@
 			$result = mysql_query($query);
 			//echo $query;
 
+
 			while($row = mysql_fetch_assoc($result) )
 			{
 				echo "location: ".$row['location'];

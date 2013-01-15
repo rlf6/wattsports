@@ -144,6 +144,8 @@ else
 
 $daysArray = getNumberOfDays($date_start_php, $date_end_php, $exclude);
 
+	
+//===========calculate available slots============
 
 //==============Matches per day
 //number of hours in a match day
