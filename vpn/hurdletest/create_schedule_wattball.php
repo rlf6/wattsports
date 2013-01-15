@@ -61,7 +61,7 @@ for($i=0; $i < $m/2; $i++)
 	$part2[$i]=$players[$x];
 	$x++;
 }
-$x=($round-1)*($m/2)
+$x=($round-1)*($m/2);
 
 for($p; $p < ($m/2); $p++)
 {
