@@ -25,6 +25,7 @@ if (($num_teams % 2)==0) //for an even number of teams
 {
 	$m = $num_teams;
 	$rounds = $m - 1;
+	//$games = 2d array ---skipping for now as php flexible enough to add to array without defining length
 	$x = 1;	
 	$slots = (($num_teams-1)/2)*$rounds;
 	$p = 0; //variable for looping when pairing in round robin
@@ -38,7 +39,6 @@ else //for an odd number of teams
 	$p = 1; //justification -- we want to ignore the first pairing if we have dummy team 0
 }
 $y=0;
-$players = array();
 for($x; $x<=$num_teams; $x++)
 {
 	$players[$y]=$x;
@@ -48,94 +48,66 @@ for($x; $x<=$num_teams; $x++)
 // =============Pairing Algorithm ===============
 $round = 1;
 $x=0;
-$part1 = array();
-$part2 = array();
 for($i=0; $i < $m/2; $i++)
 {
 	$part1[$i]=$players[$x];
 	$x++;
+	//echo $part1[$i];
 }
-$x=0;
+//echo "<br>";
 for($i=0; $i < $m/2; $i++)
 {
 	$part2[$i]=$players[$x];
 	$x++;
+	//echo $part2[$i];
 }
 $x=($round-1)*($m/2);
 
 for($p; $p < ($m/2); $p++)
 {
-	games[$x][0]=part1[$p];
-	games[$x][1]=part2[$p];
+	$games[$x][0]=$part1[$p];
+	$games[$x][1]=$part2[$p];
 	$x++;
 }
-$round++
+$round++;
 //loop round 2 to number of rounds
 for($round; $round <= $rounds; $round++)
-{
+{	
+	//echo "Round: ". $round . "of " . $rounds . "<br>";
 	//round robin algorithm
 	$temp1 = $part1[1];
-	for($j = 2; $j < (m/2); $j++)
+	for($j = 2; $j < ($m/2); $j++)
 	{
 		$temp2 = $part1[$j];
 		$part1[$j] = $temp1;
 		$temp1 = $temp2;
 	}
-	for($j; $j>=0; $j--)
+	for($j=($m/2)-1; $j>=0; $j--)
 	{
 		$temp2 = $part2[$j];
 		$part2[$j] = $temp1;
 		$temp1 = $temp2;
 	}
 	$part1[1]=$temp1;
-	$x = ($round-1)*($m/2)	
+	$x = ($round-1)*($m/2)/2;
+	
 	if (($num_teams % 2) == 0)
 	{ $p = 0;}
 	else
 	{ $p = 1;}
-	for($p; $p < ($m/2)
+	
+	for($p; $p < ($m/2); $p++)
 	{
-		games[$x][0]=part1[$p];
-		games[$x][1]=part2[$p];
+		$games[$x][0]=$part1[$p];
+		$games[$x][1]=$part2[$p];
+		//echo "Game ". $x . ": ". $games[$x][0] . " vs " . $games[$x][1] . "<br>";
 		$x++;
 	}
-	$round++;
 }
 
 //=============calculate available slots====================
 //calculate days
 //our version of php possibly too old for this function
-public function getNumberOfDays($startDate, $endDate, $exclude)
-{
-    // d/m/Y
-    $start = new DateTime($startDate);
-    $end = new DateTime($endDate);
-    $oneday = new DateInterval("P1D");
-	$x= 0;
-	
-    $days = array();
-
-    /*Iterate from $start up to $end+1 day, one day in each iteration.
-    We add one day to the $end date, because the DatePeriod only iterates up to,
-    not including, the end date.*/
-    foreach(new DatePeriod($start, $oneday, $end->add($oneday)) as $day) {
-        $day_num = $day->format("N"); //'N' number days 1 (mon) to 7 (sun) 
-        if($exclude)
-		{
-			if($day_num < 6) { //weekday
-				$days[$x] = $day->format("Y-m-d");
-				$x++;
-			} 
-		}
-		else
-		{
-				$days[$x] = $day->format("Y-m-d");
-				$x++;
-		}
-    }
-
-    return $days;       
-}
 
 if (!($_POST['weekends']))
 {
@@ -144,58 +116,104 @@ if (!($_POST['weekends']))
 else
 {	$exclude=false;	}
 
-$daysArray = getNumberOfDays($date_start_php, $date_end_php, $exclude);
+		$daysArray= array();
+    // d/m/Y
+    try 
+	{
+		$start = new DateTime($date_start_mysql);
+		$end = new DateTime($date_end_mysql);
+		
+		$oneday = new DateInterval("P1D");
+		$x= 0;
+		
+		$days = array();
+
+		/*Iterate from $start up to $end+1 day, one day in each iteration.
+		We add one day to the $end date, because the DatePeriod only iterates up to,
+		not including, the end date.*/
+		foreach(new DatePeriod($start, $oneday, $end->add($oneday)) as $day) 
+		{
+			$day_num = $day->format("N"); //'N' number days 1 (mon) to 7 (sun) 
+			if($exclude)
+			{
+				if($day_num < 6) { //weekday
+					$days[$x] = $day->format("Y-m-d");
+					$x++;
+				} 
+			}
+			else
+			{
+					$days[$x] = $day->format("Y-m-d");
+					$x++;
+			}
+		}
+		$daysArray= $days;   
+	}
+	catch(Exception $e)
+	{
+		echo "TRY failed<br>";
+		echo $e->getMessage() . "<br>";
+	}
 
 //==============Matches per day
 //number of hours in a match day
 $hour= $_POST['begin_h'];
-$min= $_POST['behin_m'];
-$date= $hour . ":" . $min;
-$start_time = date ('H:i',strtotime($date));
+$min= $_POST['begin_m'];
+$time= $hour . ":" . $min;
+$start_time = date ('H:i',strtotime($time));
 
 $hour= $_POST['end_h'];
 $min= $_POST['end_m'];
-$date= $hour . ":" . $min;
-$end_time = date ('H:i',strtotime($date));
+$time= $hour . ":" . $min;
+$end_time = date ('H:i',strtotime($time));
 
 //$time = $end_time - $start_time; //returns time in seconds
-$time = ($end_time - $start_time)/60; //returns time in minutes
-$halfday = date("H:i", strtotime('+'. $time/2 .' minutes', $start_time));
+$time = ($end_time - $start_time); //returns time in minutes
+$half = $time/2;
+//$halfday = strtotime("+". $half ." minutes'", $start_time);
+$halfday = date("H:i:s", strtotime($start_time)+($half*60*60));
 $duration = $_POST['duration'];
 $gap =  $_POST['gap'];
 $matchtime = $duration + $gap; //time needed per match (in minutes)
-$pitches = 4;//test value
+$pitches = 1;//test value
 /*
 ============here need to figure out how many pitches were selected on previous page
-
 */
 //how many matches may be played per day?
-$matches = (($time/2)/$matchtime)*$pitches*2;
-
+$matches = floor((($time/2)*60)/$matchtime)*$pitches*2;
 //available slots
 $available = $matches*count($daysArray);
 
 if($available < $slots) //slots variable is the minimum number we need to play all games in round robin tournament
 {
-	echo "You do not have enough slots to play all matches in a round-robin tournament, you may need to add dates or pitches";
+	echo "Available: " . $available . " Slots: " . $slots . "<br>";
+	echo "You do not have enough slots to play all matches in a round-robin tournament, you may need to add dates or pitches<br>";
 	//==============here need to add option to cancel schedule creation or alter input
 }
 
 //=============producing scheduling details===============================
 $played = array();
 //initialise an array representing whether each team has played this half day
-$played[$0] = true;
-for ($x = 1; $x < $num_teams; $x++)
+$played[0] = true;
+for ($x = 1; $x <= $num_teams; $x++)
 {
 	$played[$x] = false; //set to false
 }
 $newDay = true;
 $newAfternoon = false;
-$match_date = $daysArray[0];
-$day = 0
+$today=0;
+$match_date = $daysArray[$today];
 
-for($i=0; $i< $slots; $i++)
+//array to ensure a game isn't played more than once
+$gPlayed = array();
+for($x=0; $x<=count($games); $x++)
 {
+	$gPlayed[$x] = false;
+}
+
+for($i=0; $i<= count($games); $i++)
+{
+	$found = false;
 	//set start and end times
 	while($found == false)//loop until valid times found
 	{
@@ -211,68 +229,101 @@ for($i=0; $i< $slots; $i++)
 		}
 		else
 		{
-			$match_start = date("H:i", strtotime('+'. $gap .' minutes', $previous_end));
+			$match_start = date("H:i:s", strtotime($previous_end)+($gap*60));
+			//$match_start = date("H:i", strtotime('+'. $gap .' minutes', $previous_end));
 		}
 		
-		$match_end = date("H:i", strtotime('+'. $duration .' minutes', $match_start));
+		$match_end = date("H:i:s", strtotime($match_start)+($duration*60));
 		//if match starts in morning but ends in afternoon
-		//new afternoon
 		if(($match_start < $halfday) && ($match_end > $halfday))
 		{
 			$newAfternoon = true;
-			for ($x = 1; $x < $num_teams; $x++)
+			for ($x = 1; $x <= $num_teams; $x++)
 			{
 				$played[$x] = false; //set to false
 			}			
 		}		
-		//if match ends after day
-		//new day		//match_date next day
+		//if match ends after day end
 		elseif($match_end > $end_time)
 		{
 			$newDay = true;
-			for ($x = 1; $x < $num_teams; $x++)
+			for ($x = 1; $x <= $num_teams; $x++)
 			{
 				$played[$x] = false; //set to false
 			}
-			$prev = $match_date;
-			$day += 1;
-			$match_date = $daysArray[$day];
+			
+			$today += 1;
+			$match_date = $daysArray[$today];
 		}
 		else
 		{
+			$previous_end = $match_end;
+			//loop for all games to find pair where neither have played this half day, for as many games as pitches
+			//we may use these start/end times for as many matches as there are pitches
+			for($x=1; $x <= $pitches; $x++)
+			{
+				$pair = false;
+				$gameCount = 0;
+				//======put into nextPair function??
+				
+				while($pair == false && $gameCount < count($games))
+				{
+					$t1 = $games[$gameCount][0];
+					$t2 = $games[$gameCount][1];
+					print_r($played);
+					if ($played[$t1] == false && $played[$t2] == false && $gPlayed[$gameCount] == false)
+					{
+						$pair = true;
+						$played[$t1] = true;
+						$played[$t2] = true;
+						$gPlayed[$gameCount] = true;
+					}
+					else
+					{
+						if($gameCount < count($games)-1)
+						{
+							$gameCount += 1;
+						}
+						else
+						{
+							break;
+						}
+					}
+				}
+			
+				//vvv-----will require re-think-----vvvvvv
+				$location = "pitch".$x; //this requires a naming convention of pitchX pitchY ...etc
+				echo 'Game: ' . $gameCount . "<br>";
+				echo 'date: '.$match_date . "<br>";
+				echo 'start time: '.$match_start . "<br>";
+				echo 'location: '.$location . "<br>";
+				$team1 = $t1;//games[$i][0];
+				//==============need to match up number of team to row number in database
+				echo 'teamA: '.$team1 . "<br>";
+				$team2 = $t2;//$games[$i][1];
+				echo 'teamB: '.$team2 . "<br>";
+				//=========referee needed!
+				
+				/* //Insert values to database
+				if ($played[$team1]==false && $played[$team2]==false)
+				{
+					$sql = "INSERT INTO match (location_id, kick_off, date, team_A, team_B)
+					VALUES
+					('$location', '$match_start', '$match_date', '$team1', '$team2')";
+					if (!mysql_query($sql))
+					{
+						die('Error: '. mysql_error());
+					}
+					//
+					echo "match: ".$team1 ." vs ". $team2 ." added.";
+				}
+				*/
+				$i++;
+			}
 			$found = true; //exit while loop
 		}
-	}	
-	
-	//we may use these start/end times for as many matches as there are pitches
-	for($x=1; $x <= $pitches; $x++)
-	{
-		//vvv-----will require re-think-----vvvvvv
-		$location = "pitch".$x //this requires a naming convention of pitchX pitchY ...etc
-		echo 'date'.$match_date;
-		echo 'start time'.$match_start;
-		echo 'location'.$location;
-		$team1 = $game[$i][0];
-		echo 'teamA'.$team1;
-		$team2 = $game[$i][1];
-		echo 'teamA'.$team2;
-		//=========referee needed!
-		if ($played[$team1]==false && $played[$team2]==false)
-		{
-			$sql = "INSERT INTO match (location_id, kick_off, date, team_A, team_B)
-			VALUES
-			('$location', '$match_Start', '$match_date', '$team1', '$team2')";
-			if (!mysql_query($sql))
-			{
-				die('Error: '. mysql_error());
-			}
-			//
-			echo "match: ".$team1 ." vs ". $team2 ." added.";
-		}
 	}
-	$i += $pitches;
 
 }
 
 ?>
-
