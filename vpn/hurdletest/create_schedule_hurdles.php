@@ -4,6 +4,23 @@ ini_set('display_errors', 1);
 	
 include("../database.php");
 
+//=====================================================///
+// POST Data Received from hurdle schedule form ///
+
+echo $_POST['start']; //event begins date
+echo "\n".$_POST['end'];	 //event ends date
+echo "\n".$_POST['weekends'];	// include weekends bool(Null or "on") if NULL set as default to "off" otherwise you get undefined index Notice:eg   if(empty($_POST['weekends'])) $_POST['weekends'] == 'off';
+print_r($_POST['exclude']);	// array of dates to exclude 
+echo "\n".$_POST['mins_between']; //mins between races
+echo "\n".$_POST['r_begins']; //races begin hours
+echo "\n".$_POST['r_begins_mins']; //races begin mins
+echo "\n".$_POST['r_ends']; // races end hours
+echo "\n".$_POST['r_ends_mins']; //races end mins
+print_r($_POST['track']); //tracks selected array with location_id
+
+die();
+//^^REMOVE DIE^^^^////////////////////////////////////////////////////////////
+
 // ========== Work out the start date for the desired event =========
 //$event_id = $_POST['event_id'];
 $event_id = 1; // TESTING ONLY

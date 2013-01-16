@@ -11,6 +11,7 @@ if (empty($_SESSION['username'])) {
 	header('Location: http://vpn.wattsports.co.uk');
 }
 $username = $_SESSION['username'];
+
  ?>
  
 <!DOCTYPE html>

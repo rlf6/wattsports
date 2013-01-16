@@ -1261,3 +1261,102 @@
 [15-Jan-2013 15:03:45 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/wattballdetails.php:1) in /home/wattspor/public_html/vpn/header.php on line 5
 [15-Jan-2013 15:03:49 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/wattballdetails.php:1) in /home/wattspor/public_html/vpn/header.php on line 5
 [15-Jan-2013 15:05:08 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/wattballdetails.php:1) in /home/wattspor/public_html/vpn/header.php on line 5
+[15-Jan-2013 15:08:27 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:08:27 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:08:32 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:08:32 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:08:37 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:08:37 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:08:41 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:08:41 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:09:59 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:09:59 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:10:03 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:10:03 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:10:06 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:10:06 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:11:40 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:11:40 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:11:53 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:11:53 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:13:53 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:13:53 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:14:14 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:14:14 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:14:20 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:14:20 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:14:29 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:14:29 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:15:25 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:15:25 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:16:41 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:16:41 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:16:46 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:16:46 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:18:19 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:18:19 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:20:29 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:20:29 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:20:32 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:20:32 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:21:14 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:21:14 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:21:16 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:21:16 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:21:19 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:21:19 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:21:23 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:21:23 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:21:23 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:21:23 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:22:02 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:22:02 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:22:05 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:22:05 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:22:29 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:22:29 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:22:32 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:22:32 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:22:34 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:22:34 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:22:38 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:22:38 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:23:02 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:23:02 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:23:45 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:23:45 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:23:58 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:23:58 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:24:01 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:24:01 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:24:03 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:24:03 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:24:18 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:24:18 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:28:16 UTC] PHP Notice:  Undefined variable: _SESSION in /home/wattspor/public_html/vpn/header.php on line 13
+[15-Jan-2013 15:31:35 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:31:35 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:32:23 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:32:23 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:33:04 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:33:04 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:33:09 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:33:09 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:33:11 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:33:11 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 15:33:14 UTC] PHP Notice:  Undefined variable: active5 in /home/wattspor/public_html/vpn/header.php on line 87
+[15-Jan-2013 15:33:14 UTC] PHP Notice:  Undefined variable: active6 in /home/wattspor/public_html/vpn/header.php on line 88
+[15-Jan-2013 16:15:10 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/wattballdetails.php:1) in /home/wattspor/public_html/vpn/header.php on line 5
+[15-Jan-2013 16:15:15 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/wattballdetails.php:1) in /home/wattspor/public_html/vpn/header.php on line 5
+[16-Jan-2013 17:27:16 UTC] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/wattspor/public_html/vpn/hurdleschedform.php on line 36
+[16-Jan-2013 17:27:41 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/hurdleschedform.php on line 5
+[16-Jan-2013 17:28:06 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/hurdleschedform.php on line 5
+[16-Jan-2013 17:28:51 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/hurdleschedform.php on line 5
+[16-Jan-2013 17:29:32 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/hurdleschedform.php on line 5
+[16-Jan-2013 17:30:16 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/hurdleschedform.php on line 29
+[16-Jan-2013 17:30:16 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/hurdleschedform.php on line 30
+[16-Jan-2013 17:30:16 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/hurdleschedform.php on line 31
+[16-Jan-2013 17:30:16 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/hurdleschedform.php on line 29
+[16-Jan-2013 17:30:16 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/hurdleschedform.php on line 30
+[16-Jan-2013 17:30:16 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/hurdleschedform.php on line 31
+[16-Jan-2013 22:26:29 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/wattballdetails.php:1) in /home/wattspor/public_html/vpn/header.php on line 5

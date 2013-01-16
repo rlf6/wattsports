@@ -1,0 +1,14 @@
+body {
+  background-image: url('/wp-content/themes/canvas/images/pitch.png');
+	background-repeat:no-repeat;	
+  
+}
+img {
+margin: 40px 2px;
+}
+img.goal {
+margin: 25px 210px;
+}
+img.hide {
+visibility:hidden;
+}
