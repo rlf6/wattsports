@@ -170,17 +170,20 @@
 	$location_id = $php_track[0]; // TESTING ONLY - get only the first track
 	$umpire_id = 1;
 	
-	for( $i = 1; $i < count( $race_times ); $i++ )
-	{		
-		$race_time = date("H:i:s", $race_times[$i][1] );
-		$race_date = date("Y-m-d", $race_times[$i][1] );
-	
-		echo "<p> \$query = ";
-	
-		$query = "INSERT INTO race(race_name, location_id, time, date, event_event_id, umpire, day)";
-		$query = $query." VALUES('TEST', $location_id, '$race_time', '$race_date', $event_id, $umpire_id, $i)";
-	
-		echo $query."<br>";
+	for( $day = 1; $day <= count( $race_times ); $day++ )
+	{	
+		for( $race = 1; $race <= count( $race_times ); $race++ )
+		{	
+			$race_time = date("H:i:s", $race_times[$day][$race] );
+			$race_date = date("Y-m-d", $race_times[$day][$race] );
+		
+			echo "<p> \$query = ";
+		
+			$query = "INSERT INTO race(race_name, location_id, time, date, event_event_id, umpire, day)";
+			$query = $query." VALUES('TEST', $location_id, '$race_time', '$race_date', $event_id, $umpire_id, $day)";
+		
+			echo $query."<br>";
+		}
 	}
 	
 	/*
