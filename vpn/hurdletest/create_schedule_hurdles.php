@@ -172,7 +172,7 @@
 	
 	for( $day = 1; $day <= count( $race_times ); $day++ )
 	{	
-		for( $race = 1; $race <= count( $race_times ); $race++ )
+		for( $race = 1; $race <= count( $race_times[$day] ); $race++ )
 		{	
 			$race_time = date("H:i:s", $race_times[$day][$race] );
 			$race_date = date("Y-m-d", $race_times[$day][$race] );
