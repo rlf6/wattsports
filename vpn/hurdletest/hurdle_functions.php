@@ -80,7 +80,7 @@
 			{
 				if( !isset( $race_copy[$j] ) ) // is this lane available?
 				{
-					echo "Added hurdler '" . $hurdlers[$i] . "' to lane " . $j . " of race " . $race . "<br>";
+				//	echo "Added hurdler '" . $hurdlers[$i] . "' to lane " . $j . " of race " . $race . "<br>";
 					$race_array[$race][$j] = $hurdlers[$i]; // $race_copy does not exist outside of this loop, stupid. $race_array does.
 					break;
 				}
@@ -89,7 +89,7 @@
 			// Error handling
 			if( $j > $num_lanes )
 			{
-				echo "Error: Out of lanes to put hurdlers in; Not yet out of hurdlers to put in lanes.";
+			//	echo "Error: Out of lanes to put hurdlers in; Not yet out of hurdlers to put in lanes.";
 				exit;
 			}
 			
@@ -198,7 +198,7 @@
 					$lane = $center_lane + ( $negative * ceil($j / 2) );
 					$new_race_array[$i][$lane] = $race_array[$i][$j+1]; // Urgh. Arrays are out of sync.
 					
-					echo "Added hurdler '" . $race_array[$i][$j+1] . "' to lane " . $lane . " of race " . $i . "<br>";
+					//echo "Added hurdler '" . $race_array[$i][$j+1] . "' to lane " . $lane . " of race " . $i . "<br>";
 
 					$negative *= -1;
 				}
