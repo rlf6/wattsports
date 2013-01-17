@@ -2,8 +2,12 @@
 	error_reporting(E_ALL); 
 	ini_set('display_errors', 1); 
 
+	$num_lanes = 8; // MAKE THIS VARIABLE (probably not today though)
+					// MOVE THIS TO SETTINGS
+					
 	include("../database.php");
-
+	include("../hurdle_functions.php");
+	
 	//=====================================================///
 	// POST Data Received from hurdle schedule form ///
 
@@ -66,69 +70,51 @@
 	//$num_hurdlers = mysql_num_rows( $result );
 	$num_hurdlers = 50; // TESTING ONLY
 
-	$num_lanes = 8; // MAKE THIS VARIABLE (probably not today though)
-					// MOVE THIS TO SETTINGS
-
 	// ========== Work out how many days will be needed for the competition ==========
 	// ================ And how many races will be needed on each day ================
-	$days = array( );
-	$num_days = 0;
-
-	// Check that this competition is valid at all
-	// If there are *any* participants, then it will take at least one day
-	if( $num_hurdlers < 1 )
-	{
-		echo "Error: No hurdlers registered for tournament.";
-		return;
-	}
-
-	// Work out if the initial day is required
+	// Count the number of hurdlers with no previous best
 	$query = "SELECT * FROM hurdler WHERE previous_best IS NULL";
+	$num_rows = mysql_num_rows( mysql_query( $query ) );
+	
+	$days = num_days( $num_hurdlers, $num_rows ); // MOVED FOR CODE CLARITY
+
+	// ========================== ALLOCATE HURDLERS TO RACES ==========================
+	$hurdlers = array( ); // an array of hurdler IDs to allocate to lanes
+	$schedulable_days = 1;
+
+	// Do the initial day if possible
+	$query = "SELECT * FROM hurdler WHERE previous_best IS NULL ORDER BY id"; //day1
 	$result = mysql_query( $query );
 	$num_rows = mysql_num_rows( $result );
-	if( mysql_num_rows( $result ) > 0 )
+	
+	if( $num_rows > 0 )
 	{
-		echo "Information: " . $num_rows . " hurdler(s) with no previous best time on record.<br>
-				The initial day will be required.<p>";
-				
-		$num_days++;
+		for( $i = 1; $i <= $num_rows; $i++ )
+		{
+			$row = mysql_fetch_array( $result );		
+			$hurdlers[$i] = $row['id'];
+		}
 		
-		// work out how many races need to be run
-		$days[$num_days] = ceil( $num_rows / $num_lanes ); // round up because we can't have half a race
+		$lane_array[$schedulable_days] = allocate_lanes( $hurdlers, $schedulable_days );
+		$schedulable_days++;
 	}
-
-	// Loop through days until everyone fits on the same track
-	// which indicates that this is the final race	
-	$num_hurdlers_today = $num_hurdlers;
-	$i = 0;
-	while( $num_hurdlers_today >= $num_lanes && ($i < 10) )
+	
+	$hurdlers = array( ); // reset the array - we don't want odd values appearing unexpectedly
+	
+	$query = "SELECT * FROM hurdler ORDER BY previous_best ASC"; //day2
+	$result = mysql_query( $query );
+	$num_rows = mysql_num_rows( $result );
+	
+	// Could probably just make the query "SELECT id" and use the $result, but I think it's better this way
+	for( $i = 1; $i <= $num_rows; $i++ )
 	{
-		// Add this day
-		$num_days++;
-		
-		// work out how many races need to be run
-		$days[$num_days] = ceil( $num_hurdlers_today / $num_lanes );
-		
-		// if we've reached the last day (only one race for this day) then break.
-		if( $days[$num_days] == 1 )
-			break;
-		
-		// Half the number of hurdlers
-		$num_hurdlers_today = ( $num_hurdlers_today / 2 );
-		
-		// Round up to the nearest multiple of $num_lanes (unless it's smaller than the number of lanes
-		if( ( $num_hurdlers_today % $num_lanes ) > 0 )
-			$num_hurdlers_today += ( $num_lanes - ( $num_hurdlers_today % $num_lanes ) );
-			
-		$i++;
+		$row = mysql_fetch_array( $result );		
+		$hurdlers[$i] = $row['id'];
 	}
-
-	// PRINT OUTPUT
-	echo "Number of days needed for hurdle tournament: ".$num_days . "<br>";	
-	for( $i = 1; $i <= count( $days ); $i++ )
-		echo "Day " . $i . " has " . $days[$i] . " races<br>";
-
-	// ==================== Work out the times and dates for the races ====================	
+	
+	$lane_array[$schedulable_days] = allocate_lanes( $hurdlers, $schedulable_days );
+	
+	// ================== Work out the times and dates for the races ==================
 	// Facility opening hours (hours, minutes, seconds)
 	$opening_time = array( $php_r_begins, $php_r_begins_mins, 0 );
 	$closing_time = array( $php_r_ends, $php_r_ends_mins, 0 );
@@ -163,8 +149,8 @@
 		$race_date[0]++; // Increment days by 1
 	}
 	
-	// CREATE QUERIES FOR INSERTING THE RACES
-	$location_id = $php_track[0]; // TESTING ONLY - get only the first track
+	// ==================== CREATE QUERIES FOR INSERTING THE RACES ====================
+	$location_id = $php_track[0]; // TESTING ONLY - use only the first track
 	$umpire_id = 1;
 	
 	for( $day = 1; $day <= count( $race_times ); $day++ )
@@ -178,8 +164,32 @@
 		
 			echo "\$query = ";
 		
-			$query = "INSERT INTO race(race_name, location_id, time, date, event_event_id, umpire, day)";
-			$query = $query." VALUES('TEST', $location_id, '$race_time', '$race_date', $event_id, $umpire_id, $day)";
+			$query = "INSERT INTO race(race_name, location_id, time, date, ";
+			
+			// Add lanes to be assigned, if any
+			for( $lane = 1; $lane <= $num_lanes; $lane++ )
+			{
+				// Move on if we've run out of full lanes
+				if(!isset( $lane_array[$day][$race][$lane] )
+					break;
+					
+				$query = $query."lane".$lane.", ";
+			}
+
+			$query = $query."event_event_id, umpire, day)";
+			echo "<br>";
+			$query = $query." VALUES('TEST', $location_id, '$race_time', '$race_date', "
+			
+			// Assign lanes to hurdlers
+			for( $lane = 1; $lane <= $num_lanes; $lane++ )
+			{
+				if(!isset( $lane_array[$day][$race][$lane] )
+					break;
+					
+				$query = $query.$lane_array[$day][$race][$lane].", ";
+			}
+			
+			$query = $query."$event_id, $umpire_id, $day)";
 		
 			echo $query."<br>";
 		}
