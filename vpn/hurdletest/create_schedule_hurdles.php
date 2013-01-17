@@ -2,22 +2,22 @@
 	error_reporting(E_ALL); 
 	ini_set('display_errors', 1); 
 
-	$num_lanes = 8; // MAKE THIS VARIABLE (probably not today though)
+	$num_lanes = 8; // MAKE THIS CHANGE-ABLE (probably not today though)
 					// MOVE THIS TO SETTINGS
 					
 	include("../database.php");
 	include("hurdle_functions.php");
 	
-	//=====================================================///
-	// POST Data Received from hurdle schedule form ///
+	//====================================================///
+	// == POST Data Received from hurdle schedule form == ///
 
 	$php_start = $_POST['start']; //event begins date - inclusive
 	$php_end = $_POST['end'];	 //event ends date - inclusive
 	
 	if(isset($_POST['weekends']))
-		$php_weekends = $_POST['weekends'];	// include weekends bool(Null or "on")
+		$php_weekends = $_POST['weekends'];	// include weekends bool(NULL or "on")
 	else
-		$php_weekends = 'off'; // if NULL set as default to "off" otherwise you get undefined index Notice
+		$php_weekends = 'off'; // if NULL set as default to "off" otherwise you get undefined index notice
 	
 	$php_exclude = $_POST['exclude'];	// array of dates to exclude 
 	$php_mins_between = $_POST['mins_between']; //mins between races
@@ -177,7 +177,7 @@
 			}
 
 			$query = $query."event_event_id, umpire, day)";
-			//$query = $query."<br>"; // DEBUG OUTPUT
+			$query = $query."<br>"; // DEBUG OUTPUT
 			$query = $query." VALUES('TEST', $location_id, '$race_time', '$race_date', ";
 			
 			// Assign lanes to hurdlers
@@ -191,19 +191,13 @@
 			
 			$query = $query."$event_id, $umpire_id, $day)";
 		
-			//echo $query."<br>"; // DEBUG OUTPUT
+			echo $query."<br>"; // DEBUG OUTPUT
 			
-			if( !mysql_query( $query ) )
-				die( 'ERROR: ' . mysql_error( ) );
+			// RUN THE QUERY
+			//if( !mysql_query( $query ) )
+				//die( 'ERROR: ' . mysql_error( ) );
 		}
 	}
-	
-	/*
-	// INSERT
-	if( !mysql_query( $query ) )
-		die( 'ERROR: ' . mysql_error( ) );
-		
-	echo "Race added!";*/
 	
 	mysql_close( );
 ?>
