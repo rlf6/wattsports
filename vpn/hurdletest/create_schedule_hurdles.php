@@ -178,7 +178,7 @@
 
 			$query = $query."event_event_id, umpire, day)";
 			echo "<br>";
-			$query = $query." VALUES('TEST', $location_id, '$race_time', '$race_date', "
+			$query = $query." VALUES('TEST', $location_id, '$race_time', '$race_date', ";
 			
 			// Assign lanes to hurdlers
 			for( $lane = 1; $lane <= $num_lanes; $lane++ )
