@@ -40,7 +40,8 @@ $num = mysql_num_rows($query);
 <tr>
 	<td>Minutes Between Races</td>
 	<td> 
-	<select name='mins_between' width='2'> 
+	<select name='mins_between' width='2'>
+		<option value='00'>00</option>
 		<option value='05'>05</option>
 		<option value='10'>10</option>
 		<option value='15'>15</option>
@@ -74,6 +75,7 @@ $num = mysql_num_rows($query);
 		<option value='23'>23</option>
 	</select> : 
 	<select name='r_begins_mins'>
+		<option value='00'>00</option>
 		<option value='05'>05</option>
 		<option value='10'>10</option>
 		<option value='15'>15</option>
@@ -110,6 +112,7 @@ $num = mysql_num_rows($query);
 		<option value='23'>23</option>
 	</select> : 
 	<select name='r_ends_mins'>
+		<option value='00'>00</option>
 		<option value='05'>05</option>
 		<option value='10'>10</option>
 		<option value='15'>15</option>
