@@ -24,7 +24,7 @@ $num = mysql_num_rows($query);
 <tr>
 	<td>Tournament Start </td>
 	<td><input name='start' type='date'></td>
-	<td><input name="weekends" type='checkbox'></input> Include Weekends</td>
+	<td><input name='weekends' type='checkbox'></input> Include Weekends</td>
 </tr>
 <tr>
 	<td>Tournament End </td>

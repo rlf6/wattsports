@@ -9,13 +9,18 @@
 
 	$php_start = $_POST['start']; //event begins date - inclusive
 	$php_end = $_POST['end'];	 //event ends date - inclusive
+	
+	if(empty($_POST['weekends'])) $_POST['weekends'] == 'off';
 	$php_weekends = $_POST['weekends'];	// include weekends bool(Null or "on") if NULL set as default to "off" otherwise you get undefined index Notice:eg   if(empty($_POST['weekends'])) $_POST['weekends'] == 'off';
+	
 	$php_exclude = $_POST['exclude'];	// array of dates to exclude 
 	$php_mins_between = $_POST['mins_between']; //mins between races
 	$php_r_begins = $_POST['r_begins']; //races begin hours
 	$php_r_begins_mins = $_POST['r_begins_mins']; //races begin mins
 	$php_r_ends = $_POST['r_ends']; // races end hours
 	$php_r_ends_mins = $_POST['r_ends_mins']; //races end mins
+	
+	if(empty($_POST['track'])) $_POST['track'] == array( 1 );
 	$php_track = $_POST['track']; //tracks selected array with location_id
 	
 	//$php_event_name = $result_array['name']; // name of the event
@@ -30,8 +35,8 @@
 	// EXECUTIVE DECISION - EVENTS ARE NO LONGER CREATED SEPERATELY FROM RACES
 	// AND THUS MUST BE CREATED HERE
 	//$event_id = $_POST['event_id'];
-	/*$event_id = 1; // TESTING ONLY
-	$query = "SELECT * FROM event WHERE event_id='$event_id'";
+	$event_id = 1; // TESTING ONLY
+	/*$query = "SELECT * FROM event WHERE event_id='$event_id'";
 	$result = mysql_query( $query );
 	if( mysql_num_rows( $result ) < 1 ) // this may happen
 	{
