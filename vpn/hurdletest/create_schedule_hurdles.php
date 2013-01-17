@@ -170,7 +170,7 @@
 	$location_id = $php_track[0]; // TESTING ONLY - get only the first track
 	$umpire_id = 1;
 	
-	for( $i = 1; $i < count( $race_times ) ) $i++ )
+	for( $i = 1; $i < count( $race_times ) $i++ )
 	{		
 		$race_time = date("H:i:s", $race_times[$i][1] );
 		$race_date = date("Y-m-d", $race_times[$i][1] );
