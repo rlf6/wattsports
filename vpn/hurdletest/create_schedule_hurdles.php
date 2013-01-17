@@ -183,7 +183,7 @@
 			// Assign lanes to hurdlers
 			for( $lane = 1; $lane <= $num_lanes; $lane++ )
 			{
-				if(!isset( $lane_array[$day][$race][$lane] )
+				if(!isset( $lane_array[$day][$race][$lane] ) )
 					break;
 					
 				$query = $query.$lane_array[$day][$race][$lane].", ";
