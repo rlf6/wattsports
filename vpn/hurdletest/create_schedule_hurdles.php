@@ -10,10 +10,10 @@
 	$php_start = $_POST['start']; //event begins date - inclusive
 	$php_end = $_POST['end'];	 //event ends date - inclusive
 	
-	if(!isset($_POST['weekends']))
-		$php_weekends = 'off';
+	if(isset($_POST['weekends']))
+		$php_weekends = $_POST['weekends'];	// include weekends bool(Null or "on")
 	else
-		$php_weekends = $_POST['weekends'];	// include weekends bool(Null or "on") if NULL set as default to "off" otherwise you get undefined index Notice:eg   if(empty($_POST['weekends'])) $_POST['weekends'] == 'off';
+		$php_weekends = 'off'; // if NULL set as default to "off" otherwise you get undefined index Notice
 	
 	$php_exclude = $_POST['exclude'];	// array of dates to exclude 
 	$php_mins_between = $_POST['mins_between']; //mins between races
@@ -23,13 +23,14 @@
 	$php_r_ends_mins = $_POST['r_ends_mins']; //races end mins
 	
 	if(!isset($_POST['track']))
-		$php_track = array( 1 );
+		$php_track = $_POST['track']; //tracks selected array with location_id		
 	else
-		$php_track = $_POST['track']; //tracks selected array with location_id
+		$php_track = array( 1 ); // TESTING ONLY
+		// $php_track = array( );
+	
 	
 	//$php_event_name = $result_array['name']; // name of the event
 	$php_event_name = "Test Hurdlers (400m)";
-
 	//$php_sex = $_POST['sex']); // gender this hurdle race is restricted to
 	$php_sex = 'm';
 	
@@ -165,26 +166,29 @@
 		$race_date[0]++; // Increment days by 1
 	}
 	
-	// TEST SCHEDULE THE FIRST RACE
+	// CREATE QUERIES FOR INSERTING THE RACES
 	$location_id = $php_track[0]; // TESTING ONLY - get only the first track
 	$umpire_id = 1;
-	$tier = 1;
 	
-	$race_time = date("H:i:s", $race_times[$tier][1] );
-	$race_date = date("Y-m-d", $race_times[$tier][1] );
+	for( $i = 1; $i < count( $race_times ) ); $i++ )
+	{		
+		$race_time = date("H:i:s", $race_times[$i][1] );
+		$race_date = date("Y-m-d", $race_times[$i][1] );
 	
-	echo "<p> \$query = ";
+		echo "<p> \$query = ";
 	
-	$query = "INSERT INTO race(race_name, location_id, time, date, event_event_id, umpire, tier)";
-	$query = $query." VALUES('TEST', $location_id, '$race_time', '$race_date', $event_id, $umpire_id, $tier)";
+		$query = "INSERT INTO race(race_name, location_id, time, date, event_event_id, umpire, day)";
+		$query = $query." VALUES('TEST', $location_id, '$race_time', '$race_date', $event_id, $umpire_id, $i)";
 	
-	echo $query."<br>";
+		echo $query."<br>";
+	}
 	
+	/*
 	// INSERT
 	if( !mysql_query( $query ) )
 		die( 'ERROR: ' . mysql_error( ) );
 		
-	echo "Race added!";
+	echo "Race added!";*/
 	
 	mysql_close( );
 ?>
