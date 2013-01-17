@@ -22,20 +22,17 @@
 	$php_r_ends = $_POST['r_ends']; // races end hours
 	$php_r_ends_mins = $_POST['r_ends_mins']; //races end mins
 	
-	if(!isset($_POST['track']))
+	if(isset($_POST['track']))
 		$php_track = $_POST['track']; //tracks selected array with location_id		
 	else
 		$php_track = array( 1 ); // TESTING ONLY
 		// $php_track = array( );
-	
 	
 	//$php_event_name = $result_array['name']; // name of the event
 	$php_event_name = "Test Hurdlers (400m)";
 	//$php_sex = $_POST['sex']); // gender this hurdle race is restricted to
 	$php_sex = 'm';
 	
-	//die();
-	//^^REMOVE DIE^^^^////////////////////////////////////////////////////////////
 	
 	// EXECUTIVE DECISION - EVENTS ARE NO LONGER CREATED SEPERATELY FROM RACES
 	// AND THUS MUST BE CREATED HERE
