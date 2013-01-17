@@ -10,7 +10,7 @@
 	$php_start = $_POST['start']; //event begins date - inclusive
 	$php_end = $_POST['end'];	 //event ends date - inclusive
 	
-	if(empty($_POST['weekends'])) $_POST['weekends'] == 'off';
+	if(isset($_POST['weekends'])) $_POST['weekends'] == 'off';
 	$php_weekends = $_POST['weekends'];	// include weekends bool(Null or "on") if NULL set as default to "off" otherwise you get undefined index Notice:eg   if(empty($_POST['weekends'])) $_POST['weekends'] == 'off';
 	
 	$php_exclude = $_POST['exclude'];	// array of dates to exclude 
@@ -20,7 +20,7 @@
 	$php_r_ends = $_POST['r_ends']; // races end hours
 	$php_r_ends_mins = $_POST['r_ends_mins']; //races end mins
 	
-	if(empty($_POST['track'])) $_POST['track'] == array( 1 );
+	if(isset($_POST['track'])) $_POST['track'] == array( 1 );
 	$php_track = $_POST['track']; //tracks selected array with location_id
 	
 	//$php_event_name = $result_array['name']; // name of the event
