@@ -6,7 +6,7 @@
 					// MOVE THIS TO SETTINGS
 					
 	include("../database.php");
-	include("../hurdle_functions.php");
+	include("hurdle_functions.php");
 	
 	//=====================================================///
 	// POST Data Received from hurdle schedule form ///
