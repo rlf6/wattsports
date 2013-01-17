@@ -170,7 +170,7 @@
 			for( $lane = 1; $lane <= $num_lanes; $lane++ )
 			{
 				// Move on if we've run out of full lanes
-				if(!isset( $lane_array[$day][$race][$lane] )
+				if(!isset( $lane_array[$day][$race][$lane] ) )
 					break;
 					
 				$query = $query."lane".$lane.", ";
