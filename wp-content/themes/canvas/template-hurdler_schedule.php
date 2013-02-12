@@ -23,13 +23,17 @@ get_header();
             <!-- #main Starts -->
             <?php woo_main_before(); ?>
             <div id="main">                     
+			<div class="center_div" border="2px solid">
+			<div class="scroll">
+			<table border="2" width="50%">
+			<tr><th>Date</th><th>Start-Time</th><th>Runners</th></tr>
 <?php
-	
 	$event_id = $_POST['event_id'];
-		
-		
 	
-?>     
+	
+?>    
+</table>
+</div></div> 
             </div><!-- /#main -->
             <?php woo_main_after(); ?>
     
