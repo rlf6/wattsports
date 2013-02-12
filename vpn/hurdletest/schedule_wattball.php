@@ -1,13 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Schedule Event</title>
-</head>
+<?php
+$active1 ='';
+$active2 ='active';
+$active3 ='';
+$active4 ='';
+$active5 ='';
+$active6 ='';
+$Title="Scheduler";
+include("../header.php");
+include("../database.php");
 
-<body>
+$query = mysql_query("SELECT * FROM `location` WHERE `type`='track' ");
+$num = mysql_num_rows($query);
 
-<h1>Create the schedule for a wattball event</h1>
+?>
+
+<div class="center_div">
+	<div class="scroll_h">
 	   <form  method="POST" action="./create_schedule_wattball.php">
 	 	<fieldset>Event: <select name="event_id">
 	 	<?php
@@ -79,3 +87,12 @@
 	</form>
 </body>
 </html>
+
+</div>
+</div>
+</div>
+</html>
+
+<script>
+
+</script>
