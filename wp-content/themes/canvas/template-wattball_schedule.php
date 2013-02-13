@@ -25,8 +25,8 @@ include("./database.php");
             <div id="main"> 
 			<div class="center_div" border="2px solid">
 			<div class="scroll">
-			<table border="2px">
-			<tr><th>Date</th><th>Kick-off</th><th>Match</th><th>Location</th></tr>
+			<table>
+			<tr><th>Date</th><th>Kick-off</th><th colspan=4>Match</th><th>Location</th></tr>
 <?php
 	$event_id = $_POST['event_id'];
 	
@@ -36,14 +36,17 @@ include("./database.php");
 	while($row = mysql_fetch_assoc($result))
 	{
 		echo '<tr>';
-		echo '<td class="padding">'.$row['date'].'</td><td class="padding">'.$row['kick_off'].'</td>';
+		echo '<td class="padding2">'.$row['date'].'</td><td class="padding2">'.$row['kick_off'].'</td>';
+		
+		//find team names from assoc_id in match and display badge
 		$query_team = mysql_fetch_assoc(mysql_query("SELECT `team_name`, `badge` FROM `wattball_team` WHERE assoc_id='".$row['team_A']."'"));
-		echo '<td class="padding"><img src="'.$query_team['badge'].'"</img>';
-		echo $query_team['team_name'].' vs. ';
+		echo '<td class="padding2"><img src="'.$query_team['badge'].'"</img><td>';
+		echo '<td class = "padding2">'.$query_team['team_name'].' vs. ';
 		$query_team = mysql_fetch_assoc(mysql_query("SELECT `team_name`, `badge` FROM `wattball_team` WHERE assoc_id='".$row['team_B']."'"));
-		echo $query_team['team_name'].'<img src="'.$query_team['badge'].'"</img></td>';
+		echo $query_team['team_name'].'</td><td class="padding2"><img src="'.$query_team['badge'].'"</img></td>';
+		
 		$location = mysql_fetch_assoc(mysql_query("SELECT `location_name` FROM `location` WHERE location_id='".$row['location_id']."'"));
-		echo '<td class = "padding">'.$location['location_name'].'</td>';
+		echo '<td class = "padding2">'.$location['location_name'].'</td>';
 		echo '</tr>';
 	}
 ?>    

@@ -5,7 +5,7 @@ $active3 ='';
 $active4 ='';
 $active5 ='';
 $active6 ='';
-$Title="Scheduler";
+$Title="Wattsports";
 include("./header.php");
 include("./database.php");
 

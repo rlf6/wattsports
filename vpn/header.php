@@ -23,21 +23,26 @@ $username = $_SESSION['username'];
 		<title>WattSports</title>
 		<link rel="stylesheet" href="http://www.wattsports.co.uk/css/bootstrap.min.css"/> 
 		
-		<link rel="stylesheet" href="http://www.wattsports.co.uk/css/docs.css"/>
+		<link rel="stylesheet" href="http://www.wattsports.co.uk/css/docs.css"/> 
 		<link rel="stylesheet" href="http://www.wattsports.co.uk/css/bootstrap-responsive.min.css"/>
+		<link rel="stylesheet" href="http://www.wattsports.co.uk/css/bootstrap.css"/>
 		<link rel="stylesheet" href="http://www.wattsports.co.uk/css/sprite_icons.css" type="text/css">
+		<link rel="stylesheet" href=""http://vpn.wattsports.co.uk/noty/demo/buttons.css" type="text/css"/>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script src='http://www.wattsports.co.uk/wp-content/themes/canvas/includes/js/general.js'></script>
 		
 		<script type="text/javascript" src="/noty/js/noty/jquery.noty.js"></script>
-
+		<script type="text/javascript" src="/noty/js/noty/layouts/inline.js"></script>
 		<script type="text/javascript" src="/noty/js/noty/layouts/top.js"></script>
 		<script type="text/javascript" src="/noty/js/noty/layouts/topCenter.js"></script>
+		<script type="text/javascript" src="/noty/js/noty/layouts/center.js"></script>
 		<script type="text/javascript" src="/noty/js/noty/layouts/topLeft.js"></script>
 		<script type="text/javascript" src="/noty/js/noty/layouts/topRight.js"></script>
 
 		<script type="text/javascript" src="/noty/js/noty/themes/default.js"></script>
+		
+	
 		<script type="text/javascript">
 		
 		
@@ -67,7 +72,7 @@ $username = $_SESSION['username'];
 	</head>    
 		
 	<body class="grey" data-spy="scroll" data-target=".subnav" data-offset="0">
-			<img class="logo" src="./logoHW.png" alt="Logo" >
+			<img class="logo" src="http://vpn.wattsports.co.uk/logoHW.png" alt="Logo" >
 	
 		
 		<div class="container">	
@@ -77,14 +82,15 @@ $username = $_SESSION['username'];
 
 	<header class="jumbotron subhead">
 	<h1><? print($Title); ?></h1>
-       <button class="btn" ><a href="http://vpn.wattsports.co.uk/logout.php">Log out</a></button>
+       <button  class='logout' ><a href="http://vpn.wattsports.co.uk/logout.php">Log out</a></button>
         <div class="subnav">
 		<div class="subnavbar-inner">
           <ul class="nav nav-pills" >
             <li class='<?print($active1);?>'><a href="home.php"><i class='glyphicon-home'></i> Home</a></li>  
-            <li class='<?print($active2);?>'><a href="scheduler.php"><i class='glyphicon-show-thumbnails-with-lines'></i> Scheduler</a></li>
+            <li class='<?print($active2);?>'><a href="scheduler.php"><i class='glyphicon-calendar'></i> Scheduler</a></li>
             <li class='<?print($active3);?>'><a href="competitors.php"><i class='glyphicon-list'></i> Competitors Details</a></li>
-			 <li class='<?print($active4);?>'><a href="statistics.php"><i class='glyphicon-list'></i> Statistics</a></li>
+			 <li class='<?print($active4);?>'><a href="results.php"><i class='glyphicon-podium'></i> Results</a></li> 
+			 <li class='<?print($active4);?>'><a href="statistics.php"><i class='glyphicon-stats'></i> Statistics</a></li>
 			 <li class='<?print($active5);?>'><a href="reports.php"><i class='glyphicon-list'></i> Reports</a></li>
 			 <li class='<?print($active6);?>'><a href="ticketing.php"><i class='glyphicon-list'></i> Ticketing</a></li>
 			

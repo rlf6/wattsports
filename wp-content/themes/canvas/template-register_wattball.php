@@ -103,11 +103,21 @@ get_header();
 					 $email = $_POST['email'];
 					 $captain = $_POST['captain'];
 					 $badge = $_POST['badge'];
-					while( $no < $no_mem){
+					 echo 	$mgr_name.
+					$mgr_surname .
+					 $team_name.
+					 $no_mem .
+					 $assoc .
+					 $addre .
+					 $email .
+					 $captain .
+					 $badge;
+
+					 while( $no < $no_mem){
 						
 						${'mem'.$no} = array( $_POST['name'.$no],$_POST['surname'.$no],$_POST['address'.$no],$_POST['dob'.$no],$_POST['phone'.$no],$_POST['email'.$no],$_POST['position'.$no],$_POST['shirt'.$no]);
 						$qu2 = "INSERT INTO `wattball_team_members` VALUES('','".${'mem'.$no}['0']."','".${'mem'.$no}['1']."','".${'mem'.$no}['2']."','".${'mem'.$no}['3']."','".${'mem'.$no}['4']."','".${'mem'.$no}['5']."','".${'mem'.$no}['6']."','".${'mem'.$no}['7']."','$assoc')"; 
-						//echo "Inserted the following values '".${'mem'.$no}['0']."', '".${'mem'.$no}['1']."', '".${'mem'.$no}['2']."', '".${'mem'.$no}['3']."', '".${'mem'.$no}['4']."', '".${'mem'.$no}['5']."', '".${'mem'.$no}['6']."','".${'mem'.$no}['7']."'<br />";
+						echo "<br />".$qu2."<br />";
 						mysql_query($qu2);
 						$no++;
 					}
@@ -125,8 +135,8 @@ get_header();
 					$values = mysql_fetch_array($results);
 					 //echo $values['member_id'];
 					 
-					 $qu = "INSERT INTO `wattball_team` VALUES('$assoc','$team_name','$mgr_name',$mgr_surname,'$email','$addre','$values[member_id]','$badge')";
-					echo "Inserted the following values '$assoc','$team_name','$email','$addre','$values[member_id]'<br />";
+					 $qu = "INSERT INTO `wattball_team` VALUES('$assoc','$team_name','$mgr_name','$mgr_surname','$email','$addre','$values[member_id]','$badge')";
+					echo $qu.'<br />';
 					mysql_query($qu);
 					echo "<script> alert('You have Successfully Registered your Team Thank you.'); </script>";
 					

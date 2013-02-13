@@ -1360,3 +1360,112 @@
 [16-Jan-2013 17:30:16 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/hurdleschedform.php on line 30
 [16-Jan-2013 17:30:16 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/hurdleschedform.php on line 31
 [16-Jan-2013 22:26:29 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/wattballdetails.php:1) in /home/wattspor/public_html/vpn/header.php on line 5
+[17-Jan-2013 12:12:23 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/wattballdetails.php:1) in /home/wattspor/public_html/vpn/header.php on line 5
+[17-Jan-2013 12:20:36 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/wattballdetails.php:1) in /home/wattspor/public_html/vpn/header.php on line 5
+[17-Jan-2013 12:21:15 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/wattballdetails.php:1) in /home/wattspor/public_html/vpn/header.php on line 5
+[17-Jan-2013 12:39:24 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/wattballdetails.php:1) in /home/wattspor/public_html/vpn/header.php on line 5
+[17-Jan-2013 13:02:20 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/wattspor/public_html/vpn/wattballdetails.php:1) in /home/wattspor/public_html/vpn/header.php on line 5
+[22-Jan-2013 14:05:47 UTC] PHP Warning:  include(../header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/schedule_hurdles.php on line 9
+[22-Jan-2013 14:05:47 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/schedule_hurdles.php on line 9
+[22-Jan-2013 14:05:50 UTC] PHP Warning:  include(../header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:05:50 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:14 UTC] PHP Warning:  include(../header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:14 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:19 UTC] PHP Warning:  include(../header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/schedule_hurdles.php on line 9
+[22-Jan-2013 14:06:19 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/schedule_hurdles.php on line 9
+[22-Jan-2013 14:06:21 UTC] PHP Warning:  include(../header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:21 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:44 UTC] PHP Warning:  include(../header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:44 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:45 UTC] PHP Warning:  include(../header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:45 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:46 UTC] PHP Warning:  include(../header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:46 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:46 UTC] PHP Warning:  include(../header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:46 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:46 UTC] PHP Warning:  include(../header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:46 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:48 UTC] PHP Warning:  include(../header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/schedule_hurdles.php on line 9
+[22-Jan-2013 14:06:48 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/schedule_hurdles.php on line 9
+[22-Jan-2013 14:06:49 UTC] PHP Warning:  include(../header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[22-Jan-2013 14:06:49 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/vpn/schedule_wattball.php on line 9
+[29-Jan-2013 14:35:49 UTC] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in /home/wattspor/public_html/vpn/hurdlerdetails.php on line 46
+[29-Jan-2013 15:02:35 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/wattspor/public_html/vpn/hurdlerdetails.php on line 46
+[31-Jan-2013 14:57:44 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/wattspor/public_html/vpn/hurdlerdelete.php on line 9
+[31-Jan-2013 14:58:04 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/wattspor/public_html/vpn/hurdlerdelete.php on line 9
+[31-Jan-2013 14:58:34 UTC] PHP Parse error:  syntax error, unexpected T_ECHO in /home/wattspor/public_html/vpn/hurdlerdelete.php on line 11
+[31-Jan-2013 14:58:57 UTC] PHP Parse error:  syntax error, unexpected T_ECHO in /home/wattspor/public_html/vpn/hurdlerdelete.php on line 11
+[31-Jan-2013 14:59:37 UTC] PHP Parse error:  syntax error, unexpected T_ECHO in /home/wattspor/public_html/vpn/hurdlerdelete.php on line 11
+[31-Jan-2013 15:00:41 UTC] PHP Parse error:  syntax error, unexpected T_ECHO in /home/wattspor/public_html/vpn/hurdlerdelete.php on line 11
+[31-Jan-2013 15:01:28 UTC] PHP Parse error:  syntax error, unexpected T_ECHO in /home/wattspor/public_html/vpn/hurdlerdelete.php on line 11
+[31-Jan-2013 21:29:11 UTC] PHP Fatal error:  Call to undefined function exists() in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 17
+[31-Jan-2013 22:50:23 UTC] PHP Fatal error:  Call to undefined function fetch_results() in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 13
+[31-Jan-2013 22:50:24 UTC] PHP Fatal error:  Call to undefined function fetch_results() in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 13
+[31-Jan-2013 22:52:13 UTC] PHP Parse error:  syntax error, unexpected T_IF in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 14
+[31-Jan-2013 22:55:17 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 2 in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 13
+[31-Jan-2013 22:55:31 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 2 in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 13
+[31-Jan-2013 22:57:37 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 2 in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 13
+[31-Jan-2013 22:57:41 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 2 in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 13
+[31-Jan-2013 22:59:50 UTC] PHP Fatal error:  Call to undefined function exists() in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 14
+[31-Jan-2013 23:02:48 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 2 in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 13
+[31-Jan-2013 23:02:55 UTC] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 2 in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 13
+[31-Jan-2013 23:03:13 UTC] PHP Warning:  mysql_result() expects parameter 2 to be long, string given in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 13
+[31-Jan-2013 23:04:17 UTC] PHP Warning:  mysql_num_rows() expects exactly 1 parameter, 2 given in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 13
+[31-Jan-2013 23:05:39 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 13
+[31-Jan-2013 23:05:48 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 13
+[01-Feb-2013 00:03:25 UTC] PHP Notice:  Undefined variable: _SESSION in /home/wattspor/public_html/vpn/header.php on line 13
+[01-Feb-2013 00:08:09 UTC] PHP Notice:  Undefined variable: _SESSION in /home/wattspor/public_html/vpn/header.php on line 13
+[01-Feb-2013 00:08:31 UTC] PHP Notice:  Undefined variable: _SESSION in /home/wattspor/public_html/vpn/header.php on line 13
+[01-Feb-2013 01:23:36 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/wattspor/public_html/vpn/expand.php on line 8
+[03-Feb-2013 00:09:16 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/header.php on line 13
+[06-Feb-2013 14:33:12 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/header.php on line 13
+[06-Feb-2013 14:42:00 UTC] PHP Parse error:  syntax error, unexpected $end in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 66
+[06-Feb-2013 14:42:05 UTC] PHP Parse error:  syntax error, unexpected $end in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 66
+[08-Feb-2013 00:24:11 UTC] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/wattspor/public_html/vpn/getlastid.php on line 10
+[08-Feb-2013 00:24:11 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/getlastid.php on line 11
+[08-Feb-2013 00:25:57 UTC] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/wattspor/public_html/vpn/getlastid.php on line 7
+[08-Feb-2013 00:25:57 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/getlastid.php on line 8
+[08-Feb-2013 00:26:20 UTC] PHP Fatal error:  Unsupported operand types in /home/wattspor/public_html/vpn/getlastid.php on line 9
+[08-Feb-2013 00:26:45 UTC] PHP Fatal error:  Unsupported operand types in /home/wattspor/public_html/vpn/getlastid.php on line 9
+[08-Feb-2013 01:03:26 UTC] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home/wattspor/public_html/vpn/getlastid.php on line 12
+[08-Feb-2013 01:03:27 UTC] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home/wattspor/public_html/vpn/getlastid.php on line 10
+[08-Feb-2013 01:03:28 UTC] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home/wattspor/public_html/vpn/getlastid.php on line 10
+[08-Feb-2013 01:03:28 UTC] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home/wattspor/public_html/vpn/getlastid.php on line 10
+[08-Feb-2013 01:03:28 UTC] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home/wattspor/public_html/vpn/getlastid.php on line 10
+[08-Feb-2013 01:03:29 UTC] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home/wattspor/public_html/vpn/getlastid.php on line 10
+[08-Feb-2013 02:53:28 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/wattspor/public_html/vpn/wattballdetails.php on line 31
+[08-Feb-2013 14:57:23 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 89
+[08-Feb-2013 14:58:46 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 90
+[08-Feb-2013 14:59:58 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in /home/wattspor/public_html/vpn/hurdlerupdate.php on line 91
+[08-Feb-2013 21:33:13 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/header.php on line 13
+[10-Feb-2013 01:14:16 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/header.php on line 13
+[10-Feb-2013 16:53:18 UTC] PHP Notice:  Undefined variable: Query in /home/wattspor/public_html/vpn/home.php on line 28
+[10-Feb-2013 16:53:18 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/home.php on line 28
+[10-Feb-2013 16:53:18 UTC] PHP Notice:  Undefined variable: Query in /home/wattspor/public_html/vpn/home.php on line 29
+[10-Feb-2013 16:53:18 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/home.php on line 29
+[10-Feb-2013 16:53:18 UTC] PHP Notice:  Undefined variable: Query in /home/wattspor/public_html/vpn/home.php on line 30
+[10-Feb-2013 16:53:18 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/home.php on line 30
+[10-Feb-2013 16:53:18 UTC] PHP Notice:  Undefined variable: Query in /home/wattspor/public_html/vpn/home.php on line 31
+[10-Feb-2013 16:53:18 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/home.php on line 31
+[10-Feb-2013 16:53:18 UTC] PHP Notice:  Undefined variable: Query in /home/wattspor/public_html/vpn/home.php on line 32
+[10-Feb-2013 16:53:18 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/home.php on line 32
+[10-Feb-2013 16:53:20 UTC] PHP Notice:  Undefined variable: Query in /home/wattspor/public_html/vpn/home.php on line 28
+[10-Feb-2013 16:53:20 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/home.php on line 28
+[10-Feb-2013 16:53:20 UTC] PHP Notice:  Undefined variable: Query in /home/wattspor/public_html/vpn/home.php on line 29
+[10-Feb-2013 16:53:20 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/home.php on line 29
+[10-Feb-2013 16:53:20 UTC] PHP Notice:  Undefined variable: Query in /home/wattspor/public_html/vpn/home.php on line 30
+[10-Feb-2013 16:53:20 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/home.php on line 30
+[10-Feb-2013 16:53:20 UTC] PHP Notice:  Undefined variable: Query in /home/wattspor/public_html/vpn/home.php on line 31
+[10-Feb-2013 16:53:20 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/home.php on line 31
+[10-Feb-2013 16:53:20 UTC] PHP Notice:  Undefined variable: Query in /home/wattspor/public_html/vpn/home.php on line 32
+[10-Feb-2013 16:53:20 UTC] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in /home/wattspor/public_html/vpn/home.php on line 32
+[10-Feb-2013 17:54:19 UTC] PHP Notice:  Undefined variable: _SESSION in /home/wattspor/public_html/vpn/header.php on line 13
+[10-Feb-2013 17:54:21 UTC] PHP Notice:  Undefined variable: _SESSION in /home/wattspor/public_html/vpn/header.php on line 13
+[10-Feb-2013 17:55:51 UTC] PHP Notice:  Undefined variable: _SESSION in /home/wattspor/public_html/vpn/header.php on line 13
+[10-Feb-2013 22:36:50 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/wattspor/public_html/vpn/home.php on line 37
+[10-Feb-2013 22:36:51 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/wattspor/public_html/vpn/home.php on line 37
+[10-Feb-2013 22:36:53 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/wattspor/public_html/vpn/home.php on line 37
+[10-Feb-2013 23:58:46 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/wattspor/public_html/vpn/home.php on line 43
+[10-Feb-2013 23:58:48 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/wattspor/public_html/vpn/home.php on line 43
+[11-Feb-2013 16:19:03 UTC] PHP Notice:  Undefined variable: _SESSION in /home/wattspor/public_html/vpn/header.php on line 13
+[12-Feb-2013 11:18:01 UTC] PHP Notice:  Undefined index: username in /home/wattspor/public_html/vpn/header.php on line 13

@@ -3,7 +3,6 @@
 /*
   Bootstrap's documentation styles
   Special styles for presenting Bootstrap's documentation and examples
-  I KNOW GIT!!!
 */
 
 
@@ -22,6 +21,12 @@ table.center
 {
 float:center;
 }
+table.inner
+{
+margin-left:40px; 
+margin-top:25px;
+margin-bottom:25px;
+}
 td.center
 {
 float:center;
@@ -32,11 +37,11 @@ float:center;
 }
 div.scroll
 {
- margin-left:auto;
+ margin-left:20%;
  margin-right:auto;
 position:static;
 width:500px;
-height:250px;
+height:350px;
 overflow:scroll;
 padding:5px;
 background-color:white;
@@ -48,17 +53,42 @@ div.scroll_h
  margin-left:auto;
  margin-right:auto;
 position:static;
-width:802px;
-height:250px;
+width:882px;
+height:380px;
+overflow:scroll;
+padding:2px;
+background-color:white;
+border: 2px solid;
+}
+
+div.scroll_w
+{
+ margin-left:auto;
+ margin-right:auto;
+position:static;
+width:852px;
+height:350px;
 overflow:scroll;
 padding:5px;
 background-color:white;
 border: 2px solid;
 }
+
 div.center_div
 {
 z-index:-5;
-padding:50px;
+padding-left:50px;
+padding-top:15px;
+padding-bottom:50px;
+height:400px;
+}
+
+div.tabs
+{
+position:relative;
+ 
+ float:right;
+ width:200px;
 }
 
 input.table
@@ -72,6 +102,19 @@ img.logo
   top:10px;
   left:40px;
   z-index:-50;
+}
+
+img.left
+{
+float:left;
+margin-top:20px;
+margin-left:40px;
+}
+img.right
+{
+float:right;
+margin-top:20px;
+margin-right:40px;
 }
 .navbar-fixed-top .brand {
   padding-right: 0;
@@ -171,7 +214,7 @@ hr.soften {
 
 /* Subnav */
 .subnav {
-width:650px;
+width:750px;
   margin-left:auto;
   margin-right:auto;
 
@@ -308,6 +351,7 @@ width:650px;
 }
 .marketing h2,
 .marketing h3 {
+
   font-weight: 300;
 }
 .marketing h2 {
@@ -582,6 +626,11 @@ form.well {
   padding: 14px;
 }
 
+form.center {
+  margin-left:160px;
+  margin-right:160px;
+}
+
 /* Tighten up spacing */
 .well hr {
   margin: 18px 0;
@@ -684,7 +733,18 @@ form.well {
   background-color: #dff0d8;
   border: 1px solid #d6e9c6;
 }
+h2.watt{
+    margin-left:85px;
 
+  }
+h2.scheduler{
+    margin-left:120px;
+
+  }
+h2.hurdler{
+    margin-left:70px;
+
+  }
 
 /* Responsive Docs
 -------------------------------------------------- */
@@ -696,9 +756,7 @@ form.well {
   }
 
   /* Change up some type stuff */
-  h2 {
-    margin-top: 27px;
-  }
+
   h2 small {
     display: block;
     line-height: 18px;

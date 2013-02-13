@@ -20,3 +20,49 @@
 [15-Jan-2013 00:57:58 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /home/wattspor/public_html/wp-content/themes/canvas/pitch.php on line 12
 [15-Jan-2013 00:57:58 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /home/wattspor/public_html/wp-content/themes/canvas/pitch.php on line 12
 [15-Jan-2013 00:57:58 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /home/wattspor/public_html/wp-content/themes/canvas/pitch.php on line 12
+[07-Feb-2013 10:23:34 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 10:25:22 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 10:26:15 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-hurdler_schedule.php on line 14
+[07-Feb-2013 10:26:59 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-hurdler_schedule.php on line 14
+[07-Feb-2013 10:27:48 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-hurdler_schedule.php on line 14
+[07-Feb-2013 10:28:41 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 10:38:05 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 10:40:54 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 10:48:35 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 10:49:24 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 10:59:37 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 10:59:53 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 11:02:19 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 12:25:59 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 13:13:49 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 13:15:02 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 36
+[07-Feb-2013 13:15:24 UTC] PHP Warning:  include(.header.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 15
+[07-Feb-2013 13:15:24 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '.header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 15
+[07-Feb-2013 13:15:24 UTC] PHP Warning:  include(./database.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 16
+[07-Feb-2013 13:15:24 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening './database.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 16
+[07-Feb-2013 13:15:24 UTC] PHP Fatal error:  Call to undefined function woo_content_before() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 20
+[07-Feb-2013 13:15:39 UTC] PHP Fatal error:  Call to undefined function is_home() in /home/wattspor/public_html/wp-content/themes/canvas/header.php on line 13
+[07-Feb-2013 13:16:36 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 13:16:51 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 14:13:49 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 14:20:33 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 22:24:08 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 22:48:05 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[07-Feb-2013 22:48:08 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-hurdler_schedule.php on line 14
+[08-Feb-2013 10:48:46 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[08-Feb-2013 11:30:17 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[08-Feb-2013 11:30:39 UTC] PHP Warning:  include(./database.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 15
+[08-Feb-2013 11:30:39 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening './database.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 15
+[08-Feb-2013 11:30:39 UTC] PHP Fatal error:  Call to undefined function woo_content_before() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 19
+[08-Feb-2013 12:42:08 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[08-Feb-2013 12:43:54 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[08-Feb-2013 13:36:11 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[08-Feb-2013 13:39:18 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[08-Feb-2013 13:41:27 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-hurdler_schedule.php on line 14
+[08-Feb-2013 13:43:26 UTC] PHP Warning:  include(./database.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[08-Feb-2013 13:43:26 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening './database.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[08-Feb-2013 13:43:26 UTC] PHP Fatal error:  Call to undefined function woo_content_before() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 18
+[08-Feb-2013 15:26:22 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[10-Feb-2013 13:49:15 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[10-Feb-2013 16:25:58 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-wattball_schedule.php on line 14
+[10-Feb-2013 16:43:32 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/wattspor/public_html/wp-content/themes/canvas/template-hurdler_schedule.php on line 14
