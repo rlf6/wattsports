@@ -16,7 +16,13 @@ div.scroll
 height:550px;
 overflow:scroll;
 }
+
 td.padding
 {
 padding:45px;
+}
+
+td.padding2
+{
+padding:20px;
 }

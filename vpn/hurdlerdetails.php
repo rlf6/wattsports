@@ -10,6 +10,7 @@ $active3 ='active';
 $active4 ='';
 $active5 ='';
 $active6 ='';
+$active7 ='';
  $Title = "Wattsports";
 $mobile ='';
 
@@ -18,13 +19,14 @@ include('./header.php');
 
 
 ?>
-
-
+<script type="text/javascript" src="/js/details.js"></script>
+	<h2 class='hurdler' >Hurdlers Details</h2>
 <div class="center_div" border="2px solid">
+
 	<div class="scroll_h">
 	<form>
-	<table border="2px">
-	<tr><th>ID</th><th>Name</th><th>Surname</th><th>Address</th><th>Mobile</th><th>Email</th><th>Dob</th><th>Sex</th><th>Previous Best</th></tr>
+	<table border="2px" id='table'>
+	<tr><th>ID</th><th>Name</th><th>Surname</th><th>Address</th><th>Mobile</th><th>Email</th><th>Dob</th><th>Sex</th><th>Previous Best</th><th></th></tr>
 <?
 	$Query = mysql_query("SELECT * FROM `hurdler` ORDER BY  `hurdler`.`id` ASC");
 	
@@ -42,65 +44,18 @@ include('./header.php');
 	$r7 = mysql_result($Query,$x,7);
 	$r8 = mysql_result($Query,$x,8);
 	
-	echo "<tr><td><input id='".$r0."0' type='text' name='id' size='2' value='".$r0."'/></td><td><input id='".$r0."1' type='text' name='name' size='4' value='".$r1."'/></td><td><input id='".$r0."2' type='text' name='surname' size='4' value='".$r2."'/></td><td><input id='".$r0."3' type='text' name='address' size='24' value='".$r3."'/></td>
-	<td><input id='".$r0."4' type='text' name='phone' size='11' value='0".$r4."'/></td><td><input id='".$r0."5' type='text' name='email' size='25' value='".$r5."'/></td><td><input id='".$r0."6' type='text' name='dob' size='8' value='".$r6."'/></td><td><input id='".$r0."7' type='text' name='sex' size='4' value='".$r7."'/></td><td><input id='".$r0."8' type='text'name='previous_best' size='4' value='".$r8."'/></td> </tr>";
+	echo "<tr id='t".$r0."'><td><input id='".$r0."0' type='text' name='hurdler:id' size='2' value='".$r0."'/></td><td><input id='".$r0."1' type='text' name='hurdler:name' size='4' value='".$r1."'/></td><td><input id='".$r0."2' type='text' name='hurdler:surname' size='4' value='".$r2."'/></td><td><input id='".$r0."3' type='text' name='hurdler:address' size='24' value='".$r3."'/></td>
+	<td><input id='".$r0."4' type='text' name='hurdler:phone' size='10' value='0".$r4."'/></td><td><input id='".$r0."5' type='text' name='hurdler:email' size='25' value='".$r5."'/></td><td><input id='".$r0."6' type='text' name='hurdler:dob' size='8' value='".$r6."'/></td><td><input id='".$r0."7' type='text' name='hurdler:sex' size='2' value='".$r7."'/></td><td><input id='".$r0."8' type='text'name='hurdler:previous_best' size='7' value='".$r8."'/></td><td><img id='".$r0."' style='cursor: pointer; cursor: hand' src='/images/delete-icon.png' onclick='confirm(id)' height='18px' width='20px' /></td> </tr>";
 
 	}
 	
 ?>
+	
 	</table>
+	
+	<img id='0' style="cursor: pointer; cursor: hand" src='/images/add-icon.png' onclick='addRow()' width='50px' height='50px' />
 	</form>
-	<script>
-	var id='';
-	var id2='';
-	var value='';
-	
- function generate(layout) {
-  	var n = noty({
-  		text: 'Success',
-  		type: 'success',
-      dismissQueue: true,
-	   timeout: '1000',
-  		layout: layout,
-  		theme: 'defaultTheme'
-  	});
-  	console.log('html: '+n.options.id);
-  }
 
-
-   
-  
-  
-
-	
-	
-	
-	$('input').click(function() { 
-	
-		value = event.target.value;  
-		id = event.target.id;
-	});
-
-	
-	$('input').blur(function(){
-	 id2 = event.target.id;
-	 var name = event.target.name;
-	var value2 = event.target.value;
-		if (value != value2 && id == id2){
-			var id3 =id.substr(0,(id.length-1));
-
-			var packet = id3+":"+name+":"+value2;
-			
-			$.post("./hurdlerupdate.php",{variable: packet},
-			  function(data) {
-				 generate('topRight');
-			  });
-		}
-
-		});
-		
-	
-	</script>
 	</div>				
 </div>
 

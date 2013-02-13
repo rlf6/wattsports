@@ -62,7 +62,7 @@ array_pop($teams);
 						
 						if($i != 0 && $i%4 == 0)echo "<tr>";
 						echo "<td class='padding'>";
-						echo '<a class="fancybox"  data-fancybox-type="iframe"  href="/wp-content/themes/canvas/teams_details.php?id='.$teams[$i]['assoc_id'].'" id="'.$teams[$i]['assoc_id'].'" )" ><img src="'. $teams[$i]['badge'] .'" title="'.$teams[$i]['team_name'].'" /></a>
+						echo '<a class="fancybox"  data-fancybox-type="iframe"  href="http://www.wattsports.co.uk/teams_details/?id='.$teams[$i]['assoc_id'].'" id="'.$teams[$i]['assoc_id'].'" )" ><img src="'. $teams[$i]['badge'] .'" title="'.$teams[$i]['team_name'].'" /></a>
 						</td>';
 						if($i != 0 && $i%4 ==0)echo "</tr>";
 						$no++;

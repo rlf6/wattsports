@@ -7,8 +7,7 @@
  *
  * @package WooFramework
  * @subpackage Template
- */
-
+*/
 
 global $woo_options;
 get_header();
@@ -41,12 +40,19 @@ get_header();
 			<?
 				if(!empty($_POST) && !empty($_POST['hurdler_name'] )){
 					$previous_best = $_POST['mins'] + $_POST['secs'] + $_POST['milli'];
-					echo $previous_best;
+					//echo $previous_best;
 					$qu = "INSERT INTO `hurdler` VALUES('','$_POST[hurdler_name]','$_POST[hurdler_surname]','$_POST[hurdler_address]','$_POST[hurdler_phone]','$_POST[hurdler_email]','$_POST[hurdler_dob]','$_POST[hurdler_sex]','$previous_best')";
 					
 					mysql_query($qu);
 					echo "<script> alert('You have Successfully Registered. Thank you.'); </script>";
 					echo "Registration is Complete you should receive an email shortly. Thank you.";
+					
+					$to      = $_POST['hurdler_email'];
+					$subject = 'Registration Complete';
+					$message = 'Thank you for Registering to Wattsports for the hurdling event.';
+					mail('mr177@hw.ac.uk', 'My Subject', $message);
+					mail($to, $subject, $message);
+					echo mail($to, $subject, $message);
 				}
 			
 				else{ 

@@ -10,6 +10,7 @@ $active3 ='active';
 $active4 ='';
 $active5 ='';
 $active6 ='';
+$active7 ='';
  $Title = "Wattsports";
 $mobile ='';
 
@@ -21,12 +22,12 @@ include('./header.php');
 
 
 <div class="center_div" border="2px solid">
-	<div class="scroll_h">
+	
 
 	
-<p><a href="wattballdetails.php"><img src="http://www.wattsports.co.uk/wp-content/themes/canvas/images/football_tournament.png" title="Edit WattBall Teams Details" alt="Register your WattBall Team" width="300" height="260" /></a>&nbsp;	&nbsp;	&nbsp;	<a href="./hurdlerdetails.php"><img src="http://www.wattsports.co.uk/wp-content/themes/canvas/images/hurdles_tournament.png" width="300" height="260" title="Edit Hurdlers details" alt="Register Hurdler"  /></a></p>
+<p><a href="wattballdetails.php"><img class="left" src="http://www.wattsports.co.uk/wp-content/themes/canvas/images/football_tournament.png" title="Edit WattBall Teams Details" alt="Edit Wattball Team Details" width="300" height="200" /></a>&nbsp;		&nbsp;	<a href="./hurdlerdetails.php"><img class="right" src="http://www.wattsports.co.uk/wp-content/themes/canvas/images/hurdles_tournament.png" width="300" height="200" title="Edit Hurdlers details" alt="Edit Hurdler Details"  /></a></p>
 
-	</div>				
+					
 </div>
 
 </div>

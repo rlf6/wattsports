@@ -68,7 +68,7 @@ echo "<html> ";
 <?
 	if($num > 0)
 	{
-		echo '<meta http-equiv="Refresh" content="3;url=http://vpn.wattsports.co.uk/home.php">';
+		echo '<meta http-equiv="Refresh" content="1;url=http://vpn.wattsports.co.uk/home.php">';
 		ECHO "<p>login successfull.</p> <img src='./loading.gif' alt='Loading' >";
 	}
 	if($num == 0)

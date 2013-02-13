@@ -10,22 +10,23 @@ $active3 ='';
 $active4 ='';
 $active5 ='';
 $active6 ='';
- $Title = "Wattsports";
+$active7 ='';
+$Title = "Wattsports";
 $mobile ='';
 include('./header.php');
 ?>
-
+	<h2 class='scheduler' >Scheduler</h2>
 <div class="center_div" border="2px solid">
 				
-			<div class="scroll">
+			<table><tr>
+				<td><FORM class="center" METHOD="LINK" ACTION="./schedule_hurdles.php">
+					<INPUT TYPE="submit" class="btn-primary btn-large" VALUE="Schedule Hurdling">
+				</FORM></td>
 				
-				<a href="/hurdletest/schedule_hurdles.php">Schedule Hurdling Tournament</a>	<a href="/hurdletest/schedule_wattball.php">Schedule Wattball Tournament</a>	
-			<?
-			// include('/hurdletest/schedule_hurdles.php');
-			
-			?>
-			
- 			</div>
+				<td><FORM class="center"  METHOD="LINK" ACTION="./schedule_wattball.php">
+					<INPUT TYPE="submit" class="btn-primary btn-large" VALUE="Schedule Wattball">
+				</FORM>	</td></tr></table>	
+ 			
 			
 			
 			
