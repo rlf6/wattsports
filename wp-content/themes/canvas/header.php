@@ -81,4 +81,4 @@
 	    
        
 	</div><!-- /#header -->
-	<?php woo_header_after(); ?>
+	
