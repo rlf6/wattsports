@@ -1,0 +1,196 @@
+/* 
+WOO CUSTOM STYLESHEET
+---------------------
+
+Instructions:
+
+Add your custom styles at the end of this file instead 
+of style.css so it is easier to update the theme. 
+Simply copy an existing style from style.css to this file, 
+and modify it to your liking.
+*/
+
+div.scroll
+{
+
+height:450px;
+overflow:scroll;
+}
+/*Padding for Team Display*/
+td.padding
+{
+padding:30px;
+}
+
+td.padding2
+{
+padding:20px;
+}
+
+div.nav
+{
+position:relative;
+height:400px;
+width:200px;
+}
+body
+{
+background-color:#eeeeee;
+}
+
+.banner
+{
+
+position:absolute;
+  left:0;
+  right:0;
+background-color: #DDDDEE;
+top:0; 
+height:40px; 
+margin-top:-50px;
+padding-top:5px;
+padding-right:5px;
+}
+#logo .site-title > a
+{
+color:#F2F2F2;
+}
+
+#header.col-full
+{
+margin-left:-50px;
+margin-right:-50px;
+margin-top:-10px;
+width:auto;
+background-image:url('/wp-content/themes/canvas/images/banner-blue.png');
+padding-left:50px;
+	padding-right:50px;
+
+}
+
+
+button.signin
+{
+float:right;
+
+	-moz-box-shadow:inset 0px 1px 0px 1px #82bbf0;
+	-webkit-box-shadow:inset 0px 1px 0px 1px #82bbf0;
+	box-shadow:inset 0px 1px 0px 1px #82bbf0;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+	background-color:#79bbff;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	border-radius:0px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.signin:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+	background-color:#378de5;
+}
+.signin:active {
+	position:relative;
+	top:1px;
+}
+
+  #navigation ul.nav > li a:hover {
+    background: #f2f2f2;
+  }
+  #navigation ul.nav > li:hover {
+    background: #f2f2f2;
+  }
+  
+/*Miniture Navigation*/
+@media only screen and (max-width: 600px) {
+	
+	#navigation
+	{	
+		padding:0;
+		margin:0;
+		top:-30px;
+	}
+	
+	#header .nav-toggle
+	{
+	
+	margin:0;
+	padding:10;
+	}
+	
+	#header
+	{
+	height:150px;
+	padding:5px 0 0 0 ;
+	}
+
+	#wrapper
+	{
+	top:50px;
+	position:relative;
+
+	background-color:white;
+	padding-left:50px;
+	padding-right:50px;
+	}
+
+}
+/*Full Navigation*/
+@media only screen and (min-width: 600px) {
+	#wrapper
+	{
+	top:50px;
+	position:relative;
+
+	background-color:white;
+	padding-left:50px;
+	padding-right:50px;
+	}
+	#navigation, ul#main-nav, li
+	{
+
+	width: 173px;
+
+	}
+	#navigation{
+	position:absolute;
+
+	left:0px; 
+	top:175px;
+
+
+	}
+
+	#content{
+	border:1px;
+	padding-top:0;
+	margin-top:0px;
+	border-right-width:1px;
+	border-left-style:solid;
+	border-left-color:#e6e6e6;
+	margin-left:125px;
+	padding-top:20px;
+	padding-left:30px;
+	
+	min-height:500px;
+	}
+	hr
+	{
+	padding:0;
+	margin-top:10;
+	margin-bottom:0px;
+	height:1px;
+	margin-left:-50px;
+	margin-right:-50px;
+	}
+}
